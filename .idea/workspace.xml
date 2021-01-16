@@ -19,16 +19,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="76ddcf9f-a7e3-4b12-a9a2-41f5cb3f19cc" name="Default Changelist" comment="Init commit">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/Model/IUser.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/Model/User.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/Presenter/ILoginPresenter.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/Presenter/LoginPresenter.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/Utils/UserRole.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/View/ILoginView.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/HomeActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/Presenter/IRegistrationPresenter.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/Presenter/RegistrationPresenter.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/RegistrationActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/View/IRegistrationView.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_home.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_registration.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/app/DivingApp.app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/DivingApp.app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/MainActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/LoginActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/Model/IUser.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/Model/IUser.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/Model/User.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/Model/User.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/Presenter/LoginPresenter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/Presenter/LoginPresenter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/View/ILoginView.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/View/ILoginView.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -36,7 +43,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[Pixel_3a_API_30_x86]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -67,7 +74,19 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="android-custom-viewC:/Users/Rafal/.gradle/caches/modules-2/files-2.1/com.google.android.material/material/1.2.1/37d55d5141066b3d118d24232fa7025b65eb3a74/material-1.2.1-sources.jar!/com/google/android/material/button/MaterialButton.java_SELECTED" value="MaterialButton" />
+    <property name="android-custom-viewC:/Users/Rafal/AppData/Local/Android/Sdk/sources/android-29/android/view/View.java_SELECTED" value="View" />
+    <property name="multi-representation-previewC:/Users/Rafal/.gradle/caches/modules-2/files-2.1/com.google.android.material/material/1.2.1/37d55d5141066b3d118d24232fa7025b65eb3a74/material-1.2.1-sources.jar!/com/google/android/material/button/MaterialButton.java_selected" value="Custom views" />
+    <property name="multi-representation-previewC:/Users/Rafal/AppData/Local/Android/Sdk/sources/android-29/android/view/View.java_selected" value="Custom views" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="android.template.1994979299">
+      <recent name="com.example.divingapp" />
+    </key>
+    <key name="android.template.-257911493">
+      <recent name="com.example.divingapp" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
@@ -177,14 +196,22 @@
     <option name="LAST_COMMIT_MESSAGE" value="Init commit" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="176" y="131" key="#com.intellij.ide.util.MemberChooser" timestamp="1610306940743">
+    <state x="176" y="131" key="#com.intellij.ide.util.MemberChooser" timestamp="1610818146575">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="176" y="131" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1610306940743" />
+    <state x="176" y="131" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1610818146575" />
+    <state x="358" y="337" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1610737497471">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="358" y="337" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1536.824@0.0.1536.824" timestamp="1610737497471" />
     <state x="548" y="191" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog" timestamp="1610304234994">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="548" y="191" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1610304234994" />
+    <state x="349" y="167" key="AndroidCreateResourceFileDialog" timestamp="1610743520232">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="349" y="167" key="AndroidCreateResourceFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1610743520232" />
     <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1610052380702">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -197,38 +224,38 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="482" y="114" key="Github.UntrackedFilesDialog/0.0.1536.824@0.0.1536.824" timestamp="1610102445662" />
-    <state width="1491" height="210" key="GridCell.Tab.0.bottom" timestamp="1610309208605">
+    <state width="1491" height="210" key="GridCell.Tab.0.bottom" timestamp="1610819635852">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1610309208605" />
-    <state width="1491" height="210" key="GridCell.Tab.0.center" timestamp="1610309208605">
+    <state width="1491" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1610819635852" />
+    <state width="1491" height="210" key="GridCell.Tab.0.center" timestamp="1610819635852">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1610309208605" />
-    <state width="1491" height="210" key="GridCell.Tab.0.left" timestamp="1610309208604">
+    <state width="1491" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1610819635852" />
+    <state width="1491" height="210" key="GridCell.Tab.0.left" timestamp="1610819635852">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1610309208604" />
-    <state width="1491" height="210" key="GridCell.Tab.0.right" timestamp="1610309208605">
+    <state width="1491" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1610819635852" />
+    <state width="1491" height="210" key="GridCell.Tab.0.right" timestamp="1610819635852">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1610309208605" />
-    <state width="1491" height="210" key="GridCell.Tab.1.bottom" timestamp="1610309212073">
+    <state width="1491" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1610819635852" />
+    <state width="1491" height="210" key="GridCell.Tab.1.bottom" timestamp="1610819635852">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="210" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1610309212073" />
-    <state width="1491" height="210" key="GridCell.Tab.1.center" timestamp="1610309212073">
+    <state width="1491" height="210" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1610819635852" />
+    <state width="1491" height="210" key="GridCell.Tab.1.center" timestamp="1610819635852">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="210" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1610309212073" />
-    <state width="1491" height="210" key="GridCell.Tab.1.left" timestamp="1610309212073">
+    <state width="1491" height="210" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1610819635852" />
+    <state width="1491" height="210" key="GridCell.Tab.1.left" timestamp="1610819635852">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="210" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1610309212073" />
-    <state width="1491" height="210" key="GridCell.Tab.1.right" timestamp="1610309212073">
+    <state width="1491" height="210" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1610819635852" />
+    <state width="1491" height="210" key="GridCell.Tab.1.right" timestamp="1610819635852">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="210" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1610309212073" />
+    <state width="1491" height="210" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1610819635852" />
     <state x="277" y="57" key="SettingsEditor" timestamp="1610102431634">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -245,25 +272,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="566" y="277" key="git4idea.rebase.GitRebaseDialog/0.0.1536.824@0.0.1536.824" timestamp="1610100947983" />
-    <state x="430" y="146" width="672" height="678" key="search.everywhere.popup" timestamp="1610283718074">
+    <state x="430" y="146" width="672" height="678" key="search.everywhere.popup" timestamp="1610748326764">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="430" y="146" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1610283718074" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/divingapp/MainActivity.kt</url>
-          <line>16</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-    <watches-manager>
-      <configuration name="app">
-        <watch expression="email" />
-      </configuration>
-    </watches-manager>
+    <state x="430" y="146" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1610748326764" />
   </component>
 </project>

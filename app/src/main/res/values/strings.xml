@@ -3,10 +3,15 @@
     <string name="email">Email</string>
     <string name="password">Password</string>
     <string name="hint">hint Example</string>
-    <string name="Login">Login</string>
-<!--    <string name="password">Password</string>-->
-<!--    <string name="password">Password</string>-->
-<!--    <string name="password">Password</string>-->
-<!--    <string name="password">Password</string>-->
-<!--    <string name="app_name">DivingApp</string>-->
+    <string name="Login">Go to login layout</string>
+    <string name="register">Register</string>
+    <string name="name">Name</string>
+    <string name="surname">Surname</string>
+    <string name="phone">Phone Number</string>
+    <string name="complexDescription">Example content description</string>
+    <string name="login">Login</string>
+    <!--    <string name="app_name">DivingApp</string>-->
+    <!--    <string name="app_name">DivingApp</string>-->
+    <!--    <string name="app_name">DivingApp</string>-->
+    <!--    <string name="app_name">DivingApp</string>-->
 </resources>

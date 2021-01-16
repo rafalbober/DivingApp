@@ -9,6 +9,7 @@ interface IUser {
     val phoneNumber: String?
     val userRole: UserRole?
     val password: String?
+    val password2: String?
     val mappedPassword: String?
 
     fun isEmailValid() : Boolean
@@ -16,5 +17,7 @@ interface IUser {
     fun isNameValid() : Boolean
     fun isSurnameValid() : Boolean
     fun isPhoneNumberValid() : Boolean
-    fun isValidLoginData() : Boolean
+    fun isLoginDataValid() : Boolean
+    fun arePasswordsMatches(): Boolean
+    fun isRegistrationDataValid(): Boolean
 }
