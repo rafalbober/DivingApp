@@ -28,7 +28,7 @@ class RegistrationActivity : AppCompatActivity(), IRegistrationView {
         val registrationPresenter = RegistrationPresenter(this)
 
         btRegister.setOnClickListener {
-            registrationPresenter.onRegister(etName.text.toString(), etSurname.text.toString(), etEmail.text.toString(), etPhoneNumber.text.toString(), etPassword.text.toString(), etPassword2.text.toString())
+            registrationPresenter.onRegister(etName, etSurname, etEmail, etPhoneNumber, etPassword, etPassword2)
         }
 
         tvLogin.setOnClickListener(View.OnClickListener {

@@ -20,13 +20,9 @@
   <component name="ChangeListManager">
     <list default="true" id="76ddcf9f-a7e3-4b12-a9a2-41f5cb3f19cc" name="Default Changelist" comment="Init commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/LoginActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/LoginActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/Presenter/LoginPresenter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/Presenter/LoginPresenter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/Presenter/IRegistrationPresenter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/Presenter/IRegistrationPresenter.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/Presenter/RegistrationPresenter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/Presenter/RegistrationPresenter.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/RegistrationActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/RegistrationActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/View/ILoginView.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/View/ILoginView.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/View/IRegistrationView.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/View/IRegistrationView.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_registration.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_registration.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -262,6 +258,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="566" y="277" key="git4idea.rebase.GitRebaseDialog/0.0.1536.824@0.0.1536.824" timestamp="1610100947983" />
+    <state x="425" y="187" key="run.anything.popup" timestamp="1610902225182">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1610902225182" />
     <state x="430" y="146" width="672" height="678" key="search.everywhere.popup" timestamp="1610748326764">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

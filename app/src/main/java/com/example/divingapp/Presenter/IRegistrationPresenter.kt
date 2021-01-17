@@ -1,9 +1,10 @@
 package com.example.divingapp.Presenter
 
+import android.widget.EditText
 import com.example.divingapp.View.IRegistrationView
 
 interface IRegistrationPresenter {
     val registrationView: IRegistrationView
 
-    fun onRegister(name: String, surname: String, email: String, phoneNumber: String, password: String, password2: String)
+    fun onRegister(name: EditText, surname: EditText, email: EditText, phoneNumber: EditText, password: EditText, password2: EditText)
 }
