@@ -1,5 +1,6 @@
 package com.example.divingapp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -27,7 +28,7 @@ class LoginActivity : AppCompatActivity(), ILoginView{
         })
 
         tvRegister.setOnClickListener(View.OnClickListener {
-            setContentView(R.layout.activity_registration)
+            startActivity(Intent(applicationContext, RegistrationActivity::class.java))
         })
 
 
@@ -37,7 +38,7 @@ class LoginActivity : AppCompatActivity(), ILoginView{
         Toast.makeText(this, result, Toast.LENGTH_SHORT).show()
     }
 
-    override fun goToHomeLayout() {
-        setContentView(R.layout.activity_home)
+    override fun goToHomeActivity() {
+        startActivity(Intent(applicationContext, HomeActivity::class.java))
     }
 }

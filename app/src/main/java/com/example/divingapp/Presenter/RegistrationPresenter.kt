@@ -18,7 +18,7 @@ class RegistrationPresenter(override val registrationView: IRegistrationView) : 
 
         if(registrationResult) {
             registrationView.onRegisterResult("Registration succeeded")
-            registrationView.goToLoginLayout()
+            registrationView.goToLoginActivity()
         }
         else
             registrationView.onRegisterResult("Registration failed")

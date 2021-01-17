@@ -10,8 +10,7 @@ class LoginPresenter(override val loginView: ILoginView) : ILoginPresenter {
         val loginResult = user.isLoginDataValid()
 
         if(loginResult) {
-            loginView.onLoginResult("good login data")
-            loginView.goToHomeLayout()
+            loginView.goToHomeActivity()
         }
         else
             loginView.onLoginResult("bad login data")

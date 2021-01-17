@@ -1,5 +1,6 @@
 package com.example.divingapp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -26,23 +27,20 @@ class RegistrationActivity : AppCompatActivity(), IRegistrationView {
 
         val registrationPresenter = RegistrationPresenter(this)
 
-        btRegister.setOnClickListener(View.OnClickListener {
-            registrationPresenter.onRegister(etName.text.toString(),etSurname.text.toString(), etEmail.text.toString(), etPhoneNumber.text.toString(), etPassword.text.toString(), etPassword2.text.toString())
-        })
+        btRegister.setOnClickListener {
+            registrationPresenter.onRegister(etName.text.toString(), etSurname.text.toString(), etEmail.text.toString(), etPhoneNumber.text.toString(), etPassword.text.toString(), etPassword2.text.toString())
+        }
 
         tvLogin.setOnClickListener(View.OnClickListener {
-            setContentView(R.layout.activity_login)
+            startActivity(Intent(applicationContext, LoginActivity::class.java))
         })
-
-
-
     }
 
     override fun onRegisterResult(result: String) {
         Toast.makeText(this, result, Toast.LENGTH_SHORT).show()
     }
 
-    override fun goToLoginLayout() {
-        setContentView(R.layout.activity_login)
+    override fun goToLoginActivity() {
+        startActivity(Intent(applicationContext, LoginActivity::class.java))
     }
 }
