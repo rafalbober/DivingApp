@@ -4,14 +4,14 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 import com.example.divingapp.Presenter.LoginPresenter
 import com.example.divingapp.View.ILoginView
 
 class LoginActivity : AppCompatActivity(), ILoginView{
+
+    private lateinit var progressBar: ProgressBar
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
@@ -20,6 +20,7 @@ class LoginActivity : AppCompatActivity(), ILoginView{
         val etPassword: EditText = findViewById(R.id.et_password)
         val btLogin: Button = findViewById(R.id.bt_login)
         val tvRegister: TextView = findViewById(R.id.tv_register)
+        progressBar = findViewById(R.id.progressBar)
 
         val loginPresenter = LoginPresenter(this)
 
@@ -40,5 +41,13 @@ class LoginActivity : AppCompatActivity(), ILoginView{
 
     override fun goToHomeActivity() {
         startActivity(Intent(applicationContext, HomeActivity::class.java))
+    }
+
+    override fun makeProgressBarVisible() {
+        progressBar.visibility = View.VISIBLE
+    }
+
+    override fun makeProgressBarInvisible() {
+        progressBar.visibility = View.INVISIBLE
     }
 }

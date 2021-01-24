@@ -3,6 +3,9 @@ package com.example.divingapp.Presenter
 import android.widget.EditText
 import com.example.divingapp.Model.User
 import com.example.divingapp.View.IRegistrationView
+import com.google.android.gms.tasks.OnCompleteListener
+import com.google.firebase.auth.AuthResult
+import com.google.firebase.auth.FirebaseAuth
 
 class RegistrationPresenter(override val registrationView: IRegistrationView) : IRegistrationPresenter {
 
@@ -12,14 +15,32 @@ class RegistrationPresenter(override val registrationView: IRegistrationView) : 
         email: EditText,
         phoneNumber: EditText,
         password: EditText,
-        password2: EditText
+        password2: EditText,
+        firebaseAuth: FirebaseAuth
     ) {
-        val user = User(name = name.text.toString(), surname = surname.text.toString(), email = email.text.toString(), phoneNumber = phoneNumber.text.toString(), password = password.text.toString(), password2 = password2.text.toString())
+        val user = User(
+                name = name.text.toString(),
+                surname = surname.text.toString(),
+                email = email.text.toString(),
+                phoneNumber = phoneNumber.text.toString(),
+                password = password.text.toString(),
+                password2 = password2.text.toString()
+        )
         val registrationResult = user.isRegistrationDataValid()
+        registrationView.makeProgressBarVisible()
 
         if(registrationResult) {
-            registrationView.onRegisterResult("Registration succeeded")
-            registrationView.goToLoginActivity()
+                firebaseAuth.createUserWithEmailAndPassword((user.email) as String, (user.password) as String).addOnCompleteListener(
+                        OnCompleteListener<AuthResult> { task ->
+                            if(task.isSuccessful){
+                                registrationView.onRegisterResult("Registration succeeded. Log in!")
+                                registrationView.goToLoginActivity()
+                            }
+                            else
+                                registrationView.makeProgressBarInvisible()
+                                registrationView.onRegisterResult("Registration failed")
+                        }
+                )
         }
         else {
             registrationView.onRegisterResult("Registration failed")

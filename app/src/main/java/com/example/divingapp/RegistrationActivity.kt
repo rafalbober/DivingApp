@@ -4,14 +4,19 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 import com.example.divingapp.Presenter.RegistrationPresenter
 import com.example.divingapp.View.IRegistrationView
+import com.google.android.gms.tasks.OnCompleteListener
+import com.google.android.gms.tasks.Task
+import com.google.firebase.auth.AuthResult
+import com.google.firebase.auth.FirebaseAuth
 
 class RegistrationActivity : AppCompatActivity(), IRegistrationView {
+
+    private lateinit var progressBar: ProgressBar
+    private lateinit var fAuth : FirebaseAuth
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_registration)
@@ -25,15 +30,30 @@ class RegistrationActivity : AppCompatActivity(), IRegistrationView {
         val tvLogin: TextView = findViewById(R.id.tv_login)
         val btRegister: Button = findViewById(R.id.bt_register)
 
+        fAuth = FirebaseAuth.getInstance()
+        progressBar = findViewById(R.id.progressBar_registration)
+
         val registrationPresenter = RegistrationPresenter(this)
 
         btRegister.setOnClickListener {
-            registrationPresenter.onRegister(etName, etSurname, etEmail, etPhoneNumber, etPassword, etPassword2)
+            registrationPresenter.onRegister(etName, etSurname, etEmail, etPhoneNumber, etPassword, etPassword2, fAuth)
+
+//            fAuth.createUserWithEmailAndPassword(etEmail.text.toString(),etPassword.text.toString()).addOnCompleteListener(
+//                OnCompleteListener<AuthResult> { task ->
+//                    if(task.isSuccessful){
+//                        Toast.makeText(this@RegistrationActivity,"success", Toast.LENGTH_SHORT).show()
+//                    }
+//                    else
+//                        Toast.makeText(this@RegistrationActivity,"not success", Toast.LENGTH_SHORT).show()
+//
+//                }
+//            )
         }
 
         tvLogin.setOnClickListener(View.OnClickListener {
             startActivity(Intent(applicationContext, LoginActivity::class.java))
         })
+
     }
 
     override fun onRegisterResult(result: String) {
@@ -43,4 +63,18 @@ class RegistrationActivity : AppCompatActivity(), IRegistrationView {
     override fun goToLoginActivity() {
         startActivity(Intent(applicationContext, LoginActivity::class.java))
     }
+
+    override fun goToHomeActivity() {
+        startActivity(Intent(applicationContext, HomeActivity::class.java))
+    }
+
+    override fun makeProgressBarVisible() {
+        progressBar.visibility = View.VISIBLE
+    }
+
+    override fun makeProgressBarInvisible() {
+        progressBar.visibility = View.INVISIBLE
+    }
+
+
 }

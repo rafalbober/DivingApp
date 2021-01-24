@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "705004767415",
+    "project_id": "divingapp-aa6b0",
+    "storage_bucket": "divingapp-aa6b0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:705004767415:android:40c466a91a101a18aca532",
+        "android_client_info": {
+          "package_name": "com.example.divingapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "705004767415-f9sapi74rmu6l7jkq0tfr0blp616724s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyChUMU2aswWSLax0e0eG4yGbIWYYr9-EmY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "705004767415-f9sapi74rmu6l7jkq0tfr0blp616724s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
