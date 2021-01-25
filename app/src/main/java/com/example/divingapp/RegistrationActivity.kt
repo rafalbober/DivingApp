@@ -11,6 +11,7 @@ import com.google.android.gms.tasks.OnCompleteListener
 import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
 
 class RegistrationActivity : AppCompatActivity(), IRegistrationView {
 
@@ -38,16 +39,6 @@ class RegistrationActivity : AppCompatActivity(), IRegistrationView {
         btRegister.setOnClickListener {
             registrationPresenter.onRegister(etName, etSurname, etEmail, etPhoneNumber, etPassword, etPassword2, fAuth)
 
-//            fAuth.createUserWithEmailAndPassword(etEmail.text.toString(),etPassword.text.toString()).addOnCompleteListener(
-//                OnCompleteListener<AuthResult> { task ->
-//                    if(task.isSuccessful){
-//                        Toast.makeText(this@RegistrationActivity,"success", Toast.LENGTH_SHORT).show()
-//                    }
-//                    else
-//                        Toast.makeText(this@RegistrationActivity,"not success", Toast.LENGTH_SHORT).show()
-//
-//                }
-//            )
         }
 
         tvLogin.setOnClickListener(View.OnClickListener {
@@ -74,6 +65,16 @@ class RegistrationActivity : AppCompatActivity(), IRegistrationView {
 
     override fun makeProgressBarInvisible() {
         progressBar.visibility = View.INVISIBLE
+    }
+
+    override fun onSuccessfulRegistration(task: Task<AuthResult>) {
+        val firebaseUser: FirebaseUser = task.result!!.user!!
+        val intent: Intent = Intent(this, HomeActivity::class.java)
+        intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+        intent.putExtra("user_id", firebaseUser.uid)
+        intent.putExtra("email", firebaseUser.email)
+        startActivity(intent)
+        finish()
     }
 
 

@@ -6,6 +6,7 @@ import com.example.divingapp.View.IRegistrationView
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseAuthUserCollisionException
 
 class RegistrationPresenter(override val registrationView: IRegistrationView) : IRegistrationPresenter {
 
@@ -30,17 +31,17 @@ class RegistrationPresenter(override val registrationView: IRegistrationView) : 
         registrationView.makeProgressBarVisible()
 
         if(registrationResult) {
-                firebaseAuth.createUserWithEmailAndPassword((user.email) as String, (user.password) as String).addOnCompleteListener(
-                        OnCompleteListener<AuthResult> { task ->
-                            if(task.isSuccessful){
-                                registrationView.onRegisterResult("Registration succeeded. Log in!")
-                                registrationView.goToLoginActivity()
-                            }
-                            else
-                                registrationView.makeProgressBarInvisible()
-                                registrationView.onRegisterResult("Registration failed")
-                        }
-                )
+            firebaseAuth.createUserWithEmailAndPassword((user.email) as String, (user.password) as String).addOnCompleteListener(
+                    OnCompleteListener<AuthResult> { task ->
+                        if (task.isSuccessful) {
+                            registrationView.makeProgressBarInvisible()
+                            registrationView.onRegisterResult("Registration succeeded.")
+                            registrationView.onSuccessfulRegistration(task)
+                        } else
+                            registrationView.makeProgressBarInvisible()
+                            registrationView.onRegisterResult(task.exception!!.message.toString())
+                    }
+            )
         }
         else {
             registrationView.onRegisterResult("Registration failed")

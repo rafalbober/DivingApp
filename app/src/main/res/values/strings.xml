@@ -10,7 +10,7 @@
     <string name="phone">Phone Number</string>
     <string name="complexDescription">Example content description</string>
     <string name="login">Login</string>
-    <!--    <string name="app_name">DivingApp</string>-->
+    <string name="logout">Logout</string>
     <!--    <string name="app_name">DivingApp</string>-->
     <!--    <string name="app_name">DivingApp</string>-->
     <!--    <string name="app_name">DivingApp</string>-->
