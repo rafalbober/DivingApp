@@ -20,12 +20,12 @@ class RegistrationPresenter(override val registrationView: IRegistrationView) : 
         firebaseAuth: FirebaseAuth
     ) {
         val user = User(
-                name = name.text.toString(),
-                surname = surname.text.toString(),
-                email = email.text.toString(),
-                phoneNumber = phoneNumber.text.toString(),
-                password = password.text.toString(),
-                password2 = password2.text.toString()
+                name = name.text.toString().trim(),
+                surname = surname.text.toString().trim(),
+                email = email.text.toString().trim(),
+                phoneNumber = phoneNumber.text.toString().trim(),
+                password = password.text.toString().trim(),
+                password2 = password2.text.toString().trim()
         )
         val registrationResult = user.isRegistrationDataValid()
         registrationView.makeProgressBarVisible()
@@ -37,9 +37,10 @@ class RegistrationPresenter(override val registrationView: IRegistrationView) : 
                             registrationView.makeProgressBarInvisible()
                             registrationView.onRegisterResult("Registration succeeded.")
                             registrationView.onSuccessfulRegistration(task)
-                        } else
+                        } else {
                             registrationView.makeProgressBarInvisible()
                             registrationView.onRegisterResult(task.exception!!.message.toString())
+                        }
                     }
             )
         }

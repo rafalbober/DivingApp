@@ -7,10 +7,15 @@ import android.view.View
 import android.widget.*
 import com.example.divingapp.Presenter.LoginPresenter
 import com.example.divingapp.View.ILoginView
+import com.google.android.gms.tasks.Task
+import com.google.firebase.auth.AuthResult
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
 
 class LoginActivity : AppCompatActivity(), ILoginView{
 
     private lateinit var progressBar: ProgressBar
+    private lateinit var fAuth : FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,9 +28,10 @@ class LoginActivity : AppCompatActivity(), ILoginView{
         progressBar = findViewById(R.id.progressBar)
 
         val loginPresenter = LoginPresenter(this)
+        fAuth = FirebaseAuth.getInstance()
 
         btLogin.setOnClickListener(View.OnClickListener {
-            loginPresenter.onLogin(etEmail.text.toString(),etPassword.text.toString())
+            loginPresenter.onLogin(etEmail,etPassword, fAuth)
         })
 
         tvRegister.setOnClickListener(View.OnClickListener {
@@ -49,5 +55,15 @@ class LoginActivity : AppCompatActivity(), ILoginView{
 
     override fun makeProgressBarInvisible() {
         progressBar.visibility = View.INVISIBLE
+    }
+
+    override fun onSuccessfulLogin(task: Task<AuthResult>) {
+        val firebaseUser: FirebaseUser = task.result!!.user!!
+        val intent: Intent = Intent(this, HomeActivity::class.java)
+        intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+        intent.putExtra("user_id", firebaseUser.uid)
+        intent.putExtra("email", firebaseUser.email)
+        startActivity(intent)
+        finish()
     }
 }
