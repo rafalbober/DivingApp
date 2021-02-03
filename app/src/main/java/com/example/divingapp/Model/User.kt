@@ -2,6 +2,7 @@ package com.example.divingapp.Model
 
 import android.util.Patterns
 import com.example.divingapp.Utils.UserRole
+import kotlin.reflect.KClass
 
 class User(override val name: String? = null, override val surname: String? = null, override val email: String? = null, override val phoneNumber: String? = null, override val userRole: UserRole? = null, override val mappedPassword: String? = null, override val password: String? = null,
            override val password2: String? = null

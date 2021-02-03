@@ -12,11 +12,19 @@ import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
+import java.util.*
+import kotlin.reflect.KClass
+import kotlin.reflect.KClassifier
+import kotlin.reflect.KType
 
-class RegistrationActivity : AppCompatActivity(), IRegistrationView {
+
+abstract class RegistrationActivity : AppCompatActivity(), IRegistrationView {
 
     private lateinit var progressBar: ProgressBar
     private lateinit var fAuth : FirebaseAuth
+    private lateinit var database: FirebaseDatabase
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,8 +41,10 @@ class RegistrationActivity : AppCompatActivity(), IRegistrationView {
 
         fAuth = FirebaseAuth.getInstance()
         progressBar = findViewById(R.id.progressBar_registration)
+        database = FirebaseDatabase.getInstance()
 
         val registrationPresenter = RegistrationPresenter(this)
+
 
         btRegister.setOnClickListener {
             registrationPresenter.onRegister(etName, etSurname, etEmail, etPhoneNumber, etPassword, etPassword2, fAuth)
@@ -67,8 +77,9 @@ class RegistrationActivity : AppCompatActivity(), IRegistrationView {
         progressBar.visibility = View.INVISIBLE
     }
 
-    override fun onSuccessfulRegistration(task: Task<AuthResult>) {
+    override fun onSuccessfulRegistration(task: Task<AuthResult>, user: KClass<Any>) {
         val firebaseUser: FirebaseUser = task.result!!.user!!
+        registerAllUserData(user)
         val intent: Intent = Intent(this, HomeActivity::class.java)
         intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
         intent.putExtra("user_id", firebaseUser.uid)
@@ -77,5 +88,10 @@ class RegistrationActivity : AppCompatActivity(), IRegistrationView {
         finish()
     }
 
+    private fun registerAllUserData( user: KClass<Any>)
+    {
+        val reference: DatabaseReference = database.getReference("Users")
 
+        reference.setValue(user);
+    }
 }

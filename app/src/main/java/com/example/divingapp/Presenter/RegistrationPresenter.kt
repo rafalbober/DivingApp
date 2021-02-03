@@ -7,6 +7,7 @@ import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseAuthUserCollisionException
+import kotlin.reflect.KClass
 
 class RegistrationPresenter(override val registrationView: IRegistrationView) : IRegistrationPresenter {
 
@@ -36,7 +37,7 @@ class RegistrationPresenter(override val registrationView: IRegistrationView) : 
                         if (task.isSuccessful) {
                             registrationView.makeProgressBarInvisible()
                             registrationView.onRegisterResult("Registration succeeded.")
-                            registrationView.onSuccessfulRegistration(task)
+                            registrationView.onSuccessfulRegistration(task, user)
                         } else {
                             registrationView.makeProgressBarInvisible()
                             registrationView.onRegisterResult(task.exception!!.message.toString())
