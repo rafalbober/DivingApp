@@ -29,10 +29,11 @@ class LoginPresenter(override val loginView: ILoginView) : ILoginPresenter {
             })
         }
         else {
-                if (!user.isEmailValid())
-                    email.error = "Email is not valid"
-                if (!user.isPasswordValid())
-                    password.error = "Password is not valid"
-            }
+            loginView.makeProgressBarInvisible()
+            if (!user.isEmailValid())
+                email.error = "Email is not valid"
+            if (!user.isPasswordValid())
+                password.error = "Password is not valid"
+        }
     }
 }

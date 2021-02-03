@@ -7,7 +7,6 @@ import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseAuthUserCollisionException
-import kotlin.reflect.KClass
 
 class RegistrationPresenter(override val registrationView: IRegistrationView) : IRegistrationPresenter {
 
@@ -46,6 +45,7 @@ class RegistrationPresenter(override val registrationView: IRegistrationView) : 
             )
         }
         else {
+            registrationView.makeProgressBarInvisible()
             registrationView.onRegisterResult("Registration failed")
 
             if(!user.isNameValid())

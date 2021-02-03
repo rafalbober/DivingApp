@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.*
+import com.example.divingapp.Model.User
 import com.example.divingapp.Presenter.RegistrationPresenter
 import com.example.divingapp.View.IRegistrationView
 import com.google.android.gms.tasks.OnCompleteListener
@@ -14,13 +15,8 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
-import java.util.*
-import kotlin.reflect.KClass
-import kotlin.reflect.KClassifier
-import kotlin.reflect.KType
 
-
-abstract class RegistrationActivity : AppCompatActivity(), IRegistrationView {
+class RegistrationActivity : AppCompatActivity(), IRegistrationView {
 
     private lateinit var progressBar: ProgressBar
     private lateinit var fAuth : FirebaseAuth
@@ -44,7 +40,6 @@ abstract class RegistrationActivity : AppCompatActivity(), IRegistrationView {
         database = FirebaseDatabase.getInstance()
 
         val registrationPresenter = RegistrationPresenter(this)
-
 
         btRegister.setOnClickListener {
             registrationPresenter.onRegister(etName, etSurname, etEmail, etPhoneNumber, etPassword, etPassword2, fAuth)
@@ -77,9 +72,9 @@ abstract class RegistrationActivity : AppCompatActivity(), IRegistrationView {
         progressBar.visibility = View.INVISIBLE
     }
 
-    override fun onSuccessfulRegistration(task: Task<AuthResult>, user: KClass<Any>) {
+    override fun onSuccessfulRegistration(task: Task<AuthResult>, user: User) {
         val firebaseUser: FirebaseUser = task.result!!.user!!
-        registerAllUserData(user)
+        registerAllUserData(user, firebaseUser.uid)
         val intent: Intent = Intent(this, HomeActivity::class.java)
         intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
         intent.putExtra("user_id", firebaseUser.uid)
@@ -88,10 +83,15 @@ abstract class RegistrationActivity : AppCompatActivity(), IRegistrationView {
         finish()
     }
 
-    private fun registerAllUserData( user: KClass<Any>)
+    private fun registerAllUserData(user: User, userId: String)
     {
         val reference: DatabaseReference = database.getReference("Users")
 
-        reference.setValue(user);
+        reference.child(userId).child("Name").setValue(user.name);
+        reference.child(userId).child("Surname").setValue(user.surname);
+        reference.child(userId).child("Email").setValue(user.email);
+        reference.child(userId).child("PhoneNumber").setValue(user.phoneNumber);
     }
+
+
 }
