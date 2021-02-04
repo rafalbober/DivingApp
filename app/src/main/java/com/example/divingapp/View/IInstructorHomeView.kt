@@ -1,6 +1,6 @@
 package com.example.divingapp.View
 
-interface IHomeView {
+interface IInstructorHomeView {
     fun goToLoginActivity()
     fun logout()
 }

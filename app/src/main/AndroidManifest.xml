@@ -9,9 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DivingApp">
-        <activity android:name=".HomeActivity"></activity>
-        <activity android:name=".RegistrationActivity" />
-        <activity android:name=".LoginActivity">
+        <activity android:name=".activities.instructorActivities.InstructorHomeActivity"></activity>
+        <activity android:name=".activities.userActivities.UserUserHomeActivity" />
+        <activity android:name=".activities.RegistrationActivity" />
+        <activity android:name=".activities.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -19,20 +19,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="76ddcf9f-a7e3-4b12-a9a2-41f5cb3f19cc" name="Default Changelist" comment="Init commit">
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/Presenter/LoginPresenter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/Presenter/LoginPresenter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/Presenter/RegistrationPresenter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/Presenter/RegistrationPresenter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/RegistrationActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/RegistrationActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/View/IRegistrationView.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/View/IRegistrationView.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/Presenter/IInstructorHomePresenter.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/Presenter/IUserHomePresenter.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/Presenter/InstructorHomePresenter.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/Presenter/UserHomePresenter.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/View/IInstructorHomeView.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/activities/instructorActivities/InstructorHomeActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_instructor_home.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/HomeActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/activities/userActivities/UserUserHomeActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/LoginActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/activities/LoginActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/Presenter/HomePresenter.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/Presenter/IHomePresenter.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/RegistrationActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/activities/RegistrationActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/View/IHomeView.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/View/IUserHomeView.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/View/ILoginView.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/View/ILoginView.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_user_home.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_registration.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_registration.xml" afterDir="false" />
     </list>
-    <list id="e84fb2dc-ac7c-41f8-bd4e-4547ad93f605" name="Revert &quot;KClass testing&quot;" comment="Revert &quot;KClass testing&quot;&#10;&#10;This reverts commit f0a012c0">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/Model/User.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/Model/User.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/Presenter/RegistrationPresenter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/Presenter/RegistrationPresenter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/RegistrationActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/RegistrationActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/View/IRegistrationView.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/View/IRegistrationView.kt" afterDir="false" />
-    </list>
+    <list id="e84fb2dc-ac7c-41f8-bd4e-4547ad93f605" name="Revert &quot;KClass testing&quot;" comment="Revert &quot;KClass testing&quot;&#10;&#10;This reverts commit f0a012c0" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -57,34 +65,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/RegistrationActivity.kt">
-      <ranges>
-        <range start1="7" end1="7" start2="7" end2="8" changelist="76ddcf9f-a7e3-4b12-a9a2-41f5cb3f19cc" />
-        <range start1="16" end1="20" start2="17" end2="17" changelist="e84fb2dc-ac7c-41f8-bd4e-4547ad93f605" />
-        <range start1="21" end1="23" start2="18" end2="19" changelist="e84fb2dc-ac7c-41f8-bd4e-4547ad93f605" />
-        <range start1="47" end1="48" start2="43" end2="43" changelist="e84fb2dc-ac7c-41f8-bd4e-4547ad93f605" />
-        <range start1="79" end1="80" start2="74" end2="75" changelist="e84fb2dc-ac7c-41f8-bd4e-4547ad93f605" />
-        <range start1="81" end1="82" start2="76" end2="77" changelist="76ddcf9f-a7e3-4b12-a9a2-41f5cb3f19cc" />
-        <range start1="89" end1="89" start2="84" end2="94" changelist="76ddcf9f-a7e3-4b12-a9a2-41f5cb3f19cc" />
-        <range start1="90" end1="93" start2="95" end2="95" changelist="e84fb2dc-ac7c-41f8-bd4e-4547ad93f605" />
-        <range start1="94" end1="96" start2="96" end2="96" changelist="e84fb2dc-ac7c-41f8-bd4e-4547ad93f605" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/View/IRegistrationView.kt">
-      <ranges>
-        <range start1="2" end1="2" start2="2" end2="3" changelist="76ddcf9f-a7e3-4b12-a9a2-41f5cb3f19cc" />
-        <range start1="4" end1="7" start2="5" end2="5" changelist="e84fb2dc-ac7c-41f8-bd4e-4547ad93f605" />
-        <range start1="14" end1="15" start2="12" end2="13" changelist="e84fb2dc-ac7c-41f8-bd4e-4547ad93f605" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/Presenter/RegistrationPresenter.kt">
-      <ranges>
-        <range start1="9" end1="10" start2="9" end2="9" changelist="e84fb2dc-ac7c-41f8-bd4e-4547ad93f605" />
-        <range start1="48" end1="48" start2="47" end2="48" changelist="76ddcf9f-a7e3-4b12-a9a2-41f5cb3f19cc" />
-      </ranges>
-    </file>
-  </component>
   <component name="ProjectId" id="1mYg6KRxvdOqCxjawC77eQqOk9d" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -105,6 +85,14 @@
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
+    <key name="android.template.915416218">
+      <recent name="com.example.divingapp.activities.instructorActivities" />
+      <recent name="com.example.divingapp" />
+    </key>
+    <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="com.example.divingapp.activities.userActivities" />
+      <recent name="com.example.divingapp.activities" />
+    </key>
     <key name="android.template.1994979299">
       <recent name="com.example.divingapp" />
     </key>
@@ -231,18 +219,30 @@
     <option name="LAST_COMMIT_MESSAGE" value="Revert &quot;KClass testing&quot;&#10;&#10;This reverts commit f0a012c0" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="176" y="131" key="#com.intellij.ide.util.MemberChooser" timestamp="1612105109757">
+    <state x="176" y="131" key="#com.intellij.ide.util.MemberChooser" timestamp="1612465521066">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="176" y="131" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1612105109757" />
+    <state x="176" y="131" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1612465521066" />
+    <state x="499" y="189" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1612459730483">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="499" y="189" key="#com.intellij.ide.util.PackageChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1612459730483" />
     <state x="358" y="337" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1610737497471">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="358" y="337" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1536.824@0.0.1536.824" timestamp="1610737497471" />
-    <state x="548" y="191" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog" timestamp="1611359937592">
+    <state x="468" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1612460657824">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="548" y="191" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1611359937592" />
+    <state x="468" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1612460657824" />
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1612457155380">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1612457155380" />
+    <state x="548" y="191" width="647" height="442" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog" timestamp="1612459737044">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="548" y="191" width="647" height="442" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1612459737044" />
     <state x="503" y="274" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1611150710823">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -267,22 +267,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="482" y="114" key="Github.UntrackedFilesDialog/0.0.1536.824@0.0.1536.824" timestamp="1610102445662" />
-    <state width="1491" height="210" key="GridCell.Tab.0.bottom" timestamp="1612390256223">
+    <state width="1491" height="210" key="GridCell.Tab.0.bottom" timestamp="1612460414205">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1612390256223" />
-    <state width="1491" height="210" key="GridCell.Tab.0.center" timestamp="1612390256223">
+    <state width="1491" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1612460414205" />
+    <state width="1491" height="210" key="GridCell.Tab.0.center" timestamp="1612460414205">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1612390256223" />
-    <state width="1491" height="210" key="GridCell.Tab.0.left" timestamp="1612390256223">
+    <state width="1491" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1612460414205" />
+    <state width="1491" height="210" key="GridCell.Tab.0.left" timestamp="1612460414204">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1612390256223" />
-    <state width="1491" height="210" key="GridCell.Tab.0.right" timestamp="1612390256223">
+    <state width="1491" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1612460414204" />
+    <state width="1491" height="210" key="GridCell.Tab.0.right" timestamp="1612460414205">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1612390256223" />
+    <state width="1491" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1612460414205" />
     <state width="1491" height="210" key="GridCell.Tab.1.bottom" timestamp="1612386180463">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
