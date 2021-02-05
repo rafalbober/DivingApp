@@ -19,7 +19,7 @@ class InstructorHomeActivity : AppCompatActivity(), IInstructorHomeView {
 
         val instructorHomePresenter = InstructorHomePresenter(this)
 
-        val btLogout: Button = findViewById(R.id.bt_logout_user)
+        val btLogout: Button = findViewById(R.id.bt_logout_instructor)
         val userId = intent.getStringExtra("user_id")
         val email = intent.getStringExtra("email")
 

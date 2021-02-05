@@ -9,7 +9,7 @@ import com.example.divingapp.Model.User
 import com.example.divingapp.Presenter.RegistrationPresenter
 import com.example.divingapp.R
 import com.example.divingapp.View.IRegistrationView
-import com.example.divingapp.activities.userActivities.UserUserHomeActivity
+import com.example.divingapp.activities.userActivities.UserHomeActivity
 import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
@@ -62,7 +62,7 @@ class RegistrationActivity : AppCompatActivity(), IRegistrationView {
     }
 
     override fun goToHomeActivity() {
-        startActivity(Intent(applicationContext, UserUserHomeActivity::class.java))
+        startActivity(Intent(applicationContext, UserHomeActivity::class.java))
     }
 
     override fun makeProgressBarVisible() {
@@ -76,7 +76,7 @@ class RegistrationActivity : AppCompatActivity(), IRegistrationView {
     override fun onSuccessfulRegistration(task: Task<AuthResult>, user: User) {
         val firebaseUser: FirebaseUser = task.result!!.user!!
         registerAllUserData(user, firebaseUser.uid)
-        val intent: Intent = Intent(this, UserUserHomeActivity::class.java)
+        val intent: Intent = Intent(this, UserHomeActivity::class.java)
         intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
         intent.putExtra("user_id", firebaseUser.uid)
         intent.putExtra("email", firebaseUser.email)

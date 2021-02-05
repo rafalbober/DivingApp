@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DivingApp">
         <activity android:name=".activities.instructorActivities.InstructorHomeActivity"></activity>
-        <activity android:name=".activities.userActivities.UserUserHomeActivity" />
+        <activity android:name=".activities.userActivities.UserHomeActivity" />
         <activity android:name=".activities.RegistrationActivity" />
         <activity android:name=".activities.LoginActivity">
             <intent-filter>

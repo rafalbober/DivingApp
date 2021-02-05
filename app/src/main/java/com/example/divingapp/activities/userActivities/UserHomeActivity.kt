@@ -11,7 +11,7 @@ import com.example.divingapp.View.IUserHomeView
 import com.example.divingapp.activities.LoginActivity
 import com.google.firebase.auth.FirebaseAuth
 
-class UserUserHomeActivity : AppCompatActivity(), IUserHomeView {
+class UserHomeActivity : AppCompatActivity(), IUserHomeView {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_user_home)

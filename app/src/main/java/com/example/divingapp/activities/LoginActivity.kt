@@ -7,10 +7,9 @@ import android.view.View
 import android.widget.*
 import com.example.divingapp.Presenter.LoginPresenter
 import com.example.divingapp.R
-import com.example.divingapp.Utils.UserRole
 import com.example.divingapp.View.ILoginView
 import com.example.divingapp.activities.instructorActivities.InstructorHomeActivity
-import com.example.divingapp.activities.userActivities.UserUserHomeActivity
+import com.example.divingapp.activities.userActivities.UserHomeActivity
 import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
@@ -44,16 +43,28 @@ class LoginActivity : AppCompatActivity(), ILoginView{
         tvRegister.setOnClickListener(View.OnClickListener {
             startActivity(Intent(applicationContext, RegistrationActivity::class.java))
         })
-
-
     }
 
     override fun onLoginResult(result: String) {
         Toast.makeText(this, result, Toast.LENGTH_SHORT).show()
     }
 
-    override fun goToHomeActivity() {
-        startActivity(Intent(applicationContext, UserUserHomeActivity::class.java))
+    private fun goToUserHomeActivity(firebaseUser: FirebaseUser) {
+        val intent = Intent(this@LoginActivity, UserHomeActivity::class.java)
+        intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+        intent.putExtra("user_id", firebaseUser.uid)
+        intent.putExtra("email", firebaseUser.email)
+        startActivity(intent)
+        finish()
+    }
+
+    private fun goToInstructorHomeActivity(firebaseUser: FirebaseUser) {
+        val intent = Intent(this@LoginActivity, InstructorHomeActivity::class.java)
+        intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+        intent.putExtra("user_id", firebaseUser.uid)
+        intent.putExtra("email", firebaseUser.email)
+        startActivity(intent)
+        finish()
     }
 
     override fun makeProgressBarVisible() {
@@ -66,32 +77,8 @@ class LoginActivity : AppCompatActivity(), ILoginView{
 
     override fun onSuccessfulLogin(task: Task<AuthResult>) {
         val firebaseUser: FirebaseUser = task.result!!.user!!
-        when (getUserRole(firebaseUser))
-        {
-            UserRole.Administrator -> Toast.makeText(this, "Something went wrong", Toast.LENGTH_SHORT).show()
-            UserRole.Instruktor -> {
-                val intent = Intent(this, InstructorHomeActivity::class.java)
-                intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
-                intent.putExtra("user_id", firebaseUser.uid)
-                intent.putExtra("email", firebaseUser.email)
-                startActivity(intent)
-                finish()
-            }
-            UserRole.Kursant -> {
-                intent = Intent(this, UserUserHomeActivity::class.java)
-                intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
-                intent.putExtra("user_id", firebaseUser.uid)
-                intent.putExtra("email", firebaseUser.email)
-                startActivity(intent)
-                finish()
-            }
-        }
-    }
-
-    override fun getUserRole(firebaseUser: FirebaseUser): UserRole {
         val usersReference: DatabaseReference = database.getReference("Users").child(firebaseUser.uid)
         val instructorsReference: DatabaseReference = database.getReference("Instructors").child(firebaseUser.uid)
-        var userRole: UserRole = UserRole.Administrator // wstepnie Admin, potem do zmiany
 
         usersReference.addListenerForSingleValueEvent(object  : ValueEventListener {
             override fun onCancelled(error: DatabaseError) {
@@ -99,8 +86,8 @@ class LoginActivity : AppCompatActivity(), ILoginView{
             }
 
             override fun onDataChange(snapshot: DataSnapshot) {
-                if(snapshot.exists())
-                    userRole = UserRole.Kursant
+                if (snapshot.exists())
+                    goToUserHomeActivity(firebaseUser)
             }
         })
 
@@ -110,11 +97,13 @@ class LoginActivity : AppCompatActivity(), ILoginView{
             }
 
             override fun onDataChange(snapshot: DataSnapshot) {
-                if (snapshot.exists())
-                    userRole = UserRole.Instruktor
+                if (snapshot.exists()) {
+                    goToInstructorHomeActivity(firebaseUser)
+                }
             }
         })
-
-        return userRole
+        Toast.makeText(this@LoginActivity, "Admin User of some unknown error", Toast.LENGTH_SHORT).show()
     }
+
+
 }

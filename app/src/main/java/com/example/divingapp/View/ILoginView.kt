@@ -7,9 +7,7 @@ import com.google.firebase.auth.FirebaseUser
 
 interface ILoginView {
     fun onLoginResult(result: String)
-    fun goToHomeActivity()
     fun makeProgressBarVisible()
     fun makeProgressBarInvisible()
     fun onSuccessfulLogin(task: Task<AuthResult>)
-    fun getUserRole(firebaseUser: FirebaseUser) : UserRole
 }
