@@ -1,4 +1,4 @@
-package com.example.divingapp.Presenter
+package com.example.divingapp.Presenter.Iinterfaces
 
 import android.widget.EditText
 import com.example.divingapp.View.ILoginView

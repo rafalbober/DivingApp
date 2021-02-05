@@ -1,30 +1,31 @@
-package com.example.divingapp.activities.userActivities
+package com.example.divingapp.activities.adminActivities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import com.example.divingapp.Presenter.classes.AdministratorHomePresenter
 import com.example.divingapp.Presenter.classes.UserHomePresenter
 import com.example.divingapp.R
-import com.example.divingapp.View.IUserHomeView
+import com.example.divingapp.View.IAdministratorHomeView
 import com.example.divingapp.activities.LoginActivity
 import com.google.firebase.auth.FirebaseAuth
 
-class UserHomeActivity : AppCompatActivity(), IUserHomeView {
+class AdministratorHomeActivity : AppCompatActivity(), IAdministratorHomeView {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_user_home)
+        setContentView(R.layout.activity_administrator_home)
 
-        val userHomePresenter = UserHomePresenter(this)
+        val administratorHomePresenter = AdministratorHomePresenter(this)
 
-        val btLogout: Button = findViewById(R.id.bt_logout_user)
+        val btLogout: Button = findViewById(R.id.bt_logout_administrator)
         val userId = intent.getStringExtra("user_id")
         val email = intent.getStringExtra("email")
 
 
         btLogout.setOnClickListener(View.OnClickListener {
-            userHomePresenter.onLogout()
+            administratorHomePresenter.onLogout()
         })
 
     }

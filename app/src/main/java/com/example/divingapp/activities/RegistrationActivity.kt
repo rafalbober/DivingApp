@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.*
 import com.example.divingapp.Model.User
-import com.example.divingapp.Presenter.RegistrationPresenter
+import com.example.divingapp.Presenter.classes.RegistrationPresenter
 import com.example.divingapp.R
 import com.example.divingapp.View.IRegistrationView
 import com.example.divingapp.activities.userActivities.UserHomeActivity

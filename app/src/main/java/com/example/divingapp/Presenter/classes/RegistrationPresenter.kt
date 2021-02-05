@@ -1,14 +1,15 @@
-package com.example.divingapp.Presenter
+package com.example.divingapp.Presenter.classes
 
 import android.widget.EditText
 import com.example.divingapp.Model.User
+import com.example.divingapp.Presenter.Iinterfaces.IRegistrationPresenter
 import com.example.divingapp.View.IRegistrationView
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.FirebaseAuthUserCollisionException
 
-class RegistrationPresenter(override val registrationView: IRegistrationView) : IRegistrationPresenter {
+class RegistrationPresenter(override val registrationView: IRegistrationView) :
+    IRegistrationPresenter {
 
     override fun onRegister(
         name: EditText,

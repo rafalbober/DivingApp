@@ -1,4 +1,4 @@
-package com.example.divingapp.Presenter
+package com.example.divingapp.Presenter.Iinterfaces
 
 import com.example.divingapp.View.IInstructorHomeView
 

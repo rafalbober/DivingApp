@@ -5,9 +5,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.*
-import com.example.divingapp.Presenter.LoginPresenter
+import com.example.divingapp.Presenter.classes.LoginPresenter
 import com.example.divingapp.R
 import com.example.divingapp.View.ILoginView
+import com.example.divingapp.activities.adminActivities.AdministratorHomeActivity
 import com.example.divingapp.activities.instructorActivities.InstructorHomeActivity
 import com.example.divingapp.activities.userActivities.UserHomeActivity
 import com.google.android.gms.tasks.Task
@@ -67,6 +68,15 @@ class LoginActivity : AppCompatActivity(), ILoginView{
         finish()
     }
 
+    private fun goToAdministratorHomeActivity(firebaseUser: FirebaseUser) {
+        val intent = Intent(this@LoginActivity, AdministratorHomeActivity::class.java)
+        intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+        intent.putExtra("user_id", firebaseUser.uid)
+        intent.putExtra("email", firebaseUser.email)
+        startActivity(intent)
+        finish()
+    }
+
     override fun makeProgressBarVisible() {
         progressBar.visibility = View.VISIBLE
     }
@@ -79,6 +89,7 @@ class LoginActivity : AppCompatActivity(), ILoginView{
         val firebaseUser: FirebaseUser = task.result!!.user!!
         val usersReference: DatabaseReference = database.getReference("Users").child(firebaseUser.uid)
         val instructorsReference: DatabaseReference = database.getReference("Instructors").child(firebaseUser.uid)
+        val administratorsReference: DatabaseReference = database.getReference("Administrators").child(firebaseUser.uid)
 
         usersReference.addListenerForSingleValueEvent(object  : ValueEventListener {
             override fun onCancelled(error: DatabaseError) {
@@ -102,8 +113,16 @@ class LoginActivity : AppCompatActivity(), ILoginView{
                 }
             }
         })
-        Toast.makeText(this@LoginActivity, "Admin User of some unknown error", Toast.LENGTH_SHORT).show()
+
+        administratorsReference.addListenerForSingleValueEvent(object  : ValueEventListener {
+            override fun onCancelled(error: DatabaseError) {
+                Toast.makeText(this@LoginActivity, "Error while retrieving data", Toast.LENGTH_SHORT).show()
+            }
+
+            override fun onDataChange(snapshot: DataSnapshot) {
+                if (snapshot.exists())
+                    goToAdministratorHomeActivity(firebaseUser)
+            }
+        })
     }
-
-
 }

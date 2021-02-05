@@ -5,8 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
-import com.example.divingapp.Presenter.InstructorHomePresenter
-import com.example.divingapp.Presenter.UserHomePresenter
+import com.example.divingapp.Presenter.classes.InstructorHomePresenter
 import com.example.divingapp.R
 import com.example.divingapp.View.IInstructorHomeView
 import com.example.divingapp.activities.LoginActivity
@@ -17,7 +16,8 @@ class InstructorHomeActivity : AppCompatActivity(), IInstructorHomeView {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_instructor_home)
 
-        val instructorHomePresenter = InstructorHomePresenter(this)
+        val instructorHomePresenter =
+            InstructorHomePresenter(this)
 
         val btLogout: Button = findViewById(R.id.bt_logout_instructor)
         val userId = intent.getStringExtra("user_id")
