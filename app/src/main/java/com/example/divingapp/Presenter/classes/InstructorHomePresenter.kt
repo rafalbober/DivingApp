@@ -10,4 +10,10 @@ class InstructorHomePresenter(override val instructorHomeView: IInstructorHomeVi
         instructorHomeView.logout()
         instructorHomeView.goToLoginActivity()
     }
+
+    override fun onProfileButtonClick() {
+        instructorHomeView.goToProfileActivity()
+    }
+
+
 }

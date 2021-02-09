@@ -9,17 +9,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DivingApp">
-        <activity android:name=".activities.adminActivities.AdministratorHomeActivity"></activity>
-        <activity android:name=".activities.instructorActivities.InstructorHomeActivity" />
-        <activity android:name=".activities.userActivities.UserHomeActivity" />
-        <activity android:name=".activities.RegistrationActivity" />
-        <activity android:name=".activities.LoginActivity">
+        <activity android:name=".activities.instructorActivities.InstructorMeetingsListActivity"></activity>
+        <activity android:name=".activities.instructorActivities.InstructorUsersListActivity" />
+        <activity android:name=".activities.instructorActivities.InstructorProfileActivity" />
+        <activity android:name=".activities.HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".activities.adminActivities.AdministratorHomeActivity" />
+        <activity android:name=".activities.instructorActivities.InstructorHomeActivity" />
+        <activity android:name=".activities.userActivities.UserHomeActivity" />
+        <activity android:name=".activities.RegistrationActivity" />
+        <activity android:name=".activities.LoginActivity" />
     </application>
 
 </manifest>

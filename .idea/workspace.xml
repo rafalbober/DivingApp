@@ -19,26 +19,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="76ddcf9f-a7e3-4b12-a9a2-41f5cb3f19cc" name="Default Changelist" comment="Init commit">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/Presenter/Iinterfaces/IAdministratorHomePresenter.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/Presenter/classes/AdministratorHomePresenter.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/View/IAdministratorHomeView.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/activities/adminActivities/AdministratorHomeActivity.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_administrator_home.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/activities/HomeActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/activities/instructorActivities/InstructorMeetingsListActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/activities/instructorActivities/InstructorProfileActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/activities/instructorActivities/InstructorUsersListActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/background.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/btn_background.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/et_background.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/logo2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_home.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_instructor_meetings_list.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_instructor_profile.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_instructor_users_list.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/Presenter/IInstructorHomePresenter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/Presenter/Iinterfaces/IInstructorHomePresenter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/Presenter/ILoginPresenter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/Presenter/Iinterfaces/ILoginPresenter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/Presenter/IRegistrationPresenter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/Presenter/Iinterfaces/IRegistrationPresenter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/Presenter/IUserHomePresenter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/Presenter/Iinterfaces/IUserHomePresenter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/Presenter/InstructorHomePresenter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/Presenter/classes/InstructorHomePresenter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/Presenter/LoginPresenter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/Presenter/classes/LoginPresenter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/Presenter/RegistrationPresenter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/Presenter/classes/RegistrationPresenter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/Presenter/UserHomePresenter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/Presenter/classes/UserHomePresenter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/activities/LoginActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/activities/LoginActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/activities/RegistrationActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/activities/RegistrationActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/Presenter/Iinterfaces/IInstructorHomePresenter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/Presenter/Iinterfaces/IInstructorHomePresenter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/Presenter/classes/InstructorHomePresenter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/Presenter/classes/InstructorHomePresenter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/View/IInstructorHomeView.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/View/IInstructorHomeView.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/activities/instructorActivities/InstructorHomeActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/activities/instructorActivities/InstructorHomeActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/activities/userActivities/UserHomeActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/activities/userActivities/UserHomeActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_instructor_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_instructor_home.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_registration.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_registration.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-night/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-night/themes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/themes.xml" afterDir="false" />
     </list>
     <list id="e84fb2dc-ac7c-41f8-bd4e-4547ad93f605" name="Revert &quot;KClass testing&quot;" comment="Revert &quot;KClass testing&quot;&#10;&#10;This reverts commit f0a012c0" />
     <option name="SHOW_DIALOG" value="false" />
@@ -59,6 +65,7 @@
         <option value="Kotlin Enum" />
         <option value="Kotlin Interface" />
         <option value="Kotlin Class" />
+        <option value="resourceFile" />
       </list>
     </option>
   </component>
@@ -80,6 +87,8 @@
     <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
     <property name="android-custom-viewC:/Users/Rafal/.gradle/caches/modules-2/files-2.1/com.google.android.material/material/1.2.1/37d55d5141066b3d118d24232fa7025b65eb3a74/material-1.2.1-sources.jar!/com/google/android/material/button/MaterialButton.java_SELECTED" value="MaterialButton" />
     <property name="android-custom-viewC:/Users/Rafal/AppData/Local/Android/Sdk/sources/android-29/android/view/View.java_SELECTED" value="View" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/drawable" />
     <property name="multi-representation-previewC:/Users/Rafal/.gradle/caches/modules-2/files-2.1/com.google.android.material/material/1.2.1/37d55d5141066b3d118d24232fa7025b65eb3a74/material-1.2.1-sources.jar!/com/google/android/material/button/MaterialButton.java_selected" value="Custom views" />
     <property name="multi-representation-previewC:/Users/Rafal/AppData/Local/Android/Sdk/sources/android-29/android/view/View.java_selected" value="Custom views" />
     <property name="project.structure.last.edited" value="Dependencies" />
@@ -91,24 +100,37 @@
     <option name="LAST_EDITED_BUILD_TYPE" value="release" />
   </component>
   <component name="RecentsManager">
-    <key name="android.template.915416218">
-      <recent name="com.example.divingapp.activities.instructorActivities" />
-      <recent name="com.example.divingapp" />
-    </key>
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
       <recent name="com.example.divingapp.Presenter.classes" />
       <recent name="com.example.divingapp.Presenter.Iinterfaces" />
       <recent name="com.example.divingapp.activities.userActivities" />
       <recent name="com.example.divingapp.activities" />
     </key>
+    <key name="android.template.-1761350049">
+      <recent name="com.example.divingapp.activities.instructorActivities" />
+    </key>
+    <key name="android.template.-1784468105">
+      <recent name="com.example.divingapp.activities" />
+    </key>
+    <key name="android.template.-74498852">
+      <recent name="com.example.divingapp.activities.instructorActivities" />
+    </key>
+    <key name="android.template.841259318">
+      <recent name="com.example.divingapp.activities.adminActivities" />
+    </key>
+    <key name="android.template.915416218">
+      <recent name="com.example.divingapp.activities.instructorActivities" />
+      <recent name="com.example.divingapp" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Rafal\AndroidStudioProjects\DivingApp\app\src\main\res\drawable" />
+      <recent name="C:\Users\Rafal\AndroidStudioProjects\DivingApp\app\src\main\res\drawable-v24" />
+    </key>
     <key name="android.template.1994979299">
       <recent name="com.example.divingapp" />
     </key>
     <key name="android.template.-257911493">
       <recent name="com.example.divingapp" />
-    </key>
-    <key name="android.template.841259318">
-      <recent name="com.example.divingapp.activities.adminActivities" />
     </key>
   </component>
   <component name="RunManager">
@@ -234,18 +256,18 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="286" y="158" key="#PSD/0.0.1536.824@0.0.1536.824" timestamp="1612526632470" />
-    <state x="176" y="131" key="#com.intellij.ide.util.MemberChooser" timestamp="1612535175011">
+    <state x="176" y="131" key="#com.intellij.ide.util.MemberChooser" timestamp="1612902474017">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="176" y="131" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1612535175011" />
+    <state x="176" y="131" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1612902474017" />
     <state x="499" y="189" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1612534959162">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="189" key="#com.intellij.ide.util.PackageChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1612534959162" />
-    <state x="358" y="337" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1610737497471">
+    <state x="358" y="337" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1612902877067">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="358" y="337" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1536.824@0.0.1536.824" timestamp="1610737497471" />
+    <state x="358" y="337" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1536.824@0.0.1536.824" timestamp="1612902877067" />
     <state x="468" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1612460657824">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -262,10 +284,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="503" y="274" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1536.824@0.0.1536.824" timestamp="1611150710823" />
-    <state x="349" y="167" key="AndroidCreateResourceFileDialog" timestamp="1612534722663">
+    <state x="349" y="167" key="AndroidCreateResourceFileDialog" timestamp="1612820464775">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="349" y="167" key="AndroidCreateResourceFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1612534722663" />
+    <state x="349" y="167" key="AndroidCreateResourceFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1612820464775" />
+    <state x="614" y="202" key="AndroidCreateXmlResourceDialog" timestamp="1612824007688">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="614" y="202" key="AndroidCreateXmlResourceDialog/0.0.1536.824@0.0.1536.824" timestamp="1612824007688" />
     <state x="390" y="0" key="CommitChangelistDialog2" timestamp="1612386113538">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -282,22 +308,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="482" y="114" key="Github.UntrackedFilesDialog/0.0.1536.824@0.0.1536.824" timestamp="1610102445662" />
-    <state width="1491" height="210" key="GridCell.Tab.0.bottom" timestamp="1612533289396">
+    <state width="1491" height="210" key="GridCell.Tab.0.bottom" timestamp="1612824358968">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1612533289396" />
-    <state width="1491" height="210" key="GridCell.Tab.0.center" timestamp="1612533289396">
+    <state width="1491" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1612824358968" />
+    <state width="1491" height="210" key="GridCell.Tab.0.center" timestamp="1612824358967">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1612533289396" />
-    <state width="1491" height="210" key="GridCell.Tab.0.left" timestamp="1612533289396">
+    <state width="1491" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1612824358967" />
+    <state width="1491" height="210" key="GridCell.Tab.0.left" timestamp="1612824358967">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1612533289396" />
-    <state width="1491" height="210" key="GridCell.Tab.0.right" timestamp="1612533289396">
+    <state width="1491" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1612824358967" />
+    <state width="1491" height="210" key="GridCell.Tab.0.right" timestamp="1612824358967">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1612533289396" />
+    <state width="1491" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1612824358967" />
     <state width="1491" height="2" key="GridCell.Tab.1.bottom" timestamp="1612530119638">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -326,6 +352,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="359" y="148" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1610100396426" />
+    <state x="584" y="190" key="chooseDestDirectoryDialog" timestamp="1612819341165">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="584" y="190" key="chooseDestDirectoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1612819341165" />
     <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1612386037618">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

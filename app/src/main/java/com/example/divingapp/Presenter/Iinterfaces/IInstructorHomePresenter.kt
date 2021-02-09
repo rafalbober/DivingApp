@@ -7,4 +7,6 @@ interface IInstructorHomePresenter {
     val instructorHomeView: IInstructorHomeView
 
     fun onLogout()
+    fun onProfileButtonClick()
+
 }

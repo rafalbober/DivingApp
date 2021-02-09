@@ -4,38 +4,79 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     tools:context=".activities.instructorActivities.InstructorHomeActivity">
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="163dp"
-        android:layout_height="97dp"
-        android:layout_marginStart="177dp"
-        android:layout_marginLeft="177dp"
-        android:layout_marginTop="130dp"
-        android:layout_marginEnd="71dp"
-        android:layout_marginRight="71dp"
-        android:text="Instructor"
-        android:textSize="24sp"
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="132dp"
+        android:text="Witaj Ponownie!"
+        android:textColor="@color/white"
+        android:textSize="36sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/bt_logout_instructor"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="161dp"
-        android:layout_marginLeft="161dp"
-        android:layout_marginTop="123dp"
-        android:layout_marginEnd="157dp"
-        android:layout_marginRight="157dp"
-        android:layout_marginBottom="333dp"
-        android:clickable="true"
-        android:text="@string/logout"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/bt_profile_instructor"
+        android:layout_width="274dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="104dp"
+        android:background="@drawable/btn_background"
+        android:text="Profil"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:backgroundTint="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <Button
+        android:id="@+id/bt_users_instructor"
+        android:layout_width="274dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/btn_background"
+        android:text="Kursanci"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:backgroundTint="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/bt_profile_instructor"
+        app:layout_constraintStart_toStartOf="@+id/bt_profile_instructor"
+        app:layout_constraintTop_toBottomOf="@+id/bt_profile_instructor" />
+
+    <Button
+        android:id="@+id/bt_meetings_instructor"
+        android:layout_width="274dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/btn_background"
+        android:text="Spotkania"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:backgroundTint="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/bt_users_instructor"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="@+id/bt_users_instructor"
+        app:layout_constraintTop_toBottomOf="@+id/bt_users_instructor" />
+
+    <Button
+        android:id="@+id/bt_logout_instructor"
+        android:layout_width="274dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/btn_background"
+        android:text="Wyloguj się"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:backgroundTint="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/bt_meetings_instructor"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="@+id/bt_meetings_instructor"
+        app:layout_constraintTop_toBottomOf="@+id/bt_meetings_instructor" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

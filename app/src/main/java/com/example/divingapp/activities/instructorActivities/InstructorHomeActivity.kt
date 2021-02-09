@@ -19,6 +19,9 @@ class InstructorHomeActivity : AppCompatActivity(), IInstructorHomeView {
         val instructorHomePresenter =
             InstructorHomePresenter(this)
 
+        val btProfile: Button = findViewById(R.id.bt_profile_instructor)
+        val btUsers: Button = findViewById(R.id.bt_users_instructor)
+        val btMeetings: Button = findViewById(R.id.bt_meetings_instructor)
         val btLogout: Button = findViewById(R.id.bt_logout_instructor)
         val userId = intent.getStringExtra("user_id")
         val email = intent.getStringExtra("email")
@@ -28,11 +31,35 @@ class InstructorHomeActivity : AppCompatActivity(), IInstructorHomeView {
             instructorHomePresenter.onLogout()
         })
 
+        btProfile.setOnClickListener(View.OnClickListener {
+            instructorHomePresenter.onProfileButtonClick()
+        })
+
+        btMeetings.setOnClickListener(View.OnClickListener {
+            instructorHomePresenter.onProfileButtonClick()
+        })
+
+        btUsers.setOnClickListener(View.OnClickListener {
+            instructorHomePresenter.onProfileButtonClick()
+        })
+
     }
 
     override fun goToLoginActivity() {
         startActivity(Intent(this, LoginActivity::class.java))
         finish()
+    }
+
+    override fun goToProfileActivity() {
+        startActivity(Intent(this, InstructorProfileActivity::class.java))
+    }
+
+    override fun goToUsersListActivity() {
+        startActivity(Intent(this, InstructorUsersListActivity::class.java))
+    }
+
+    override fun goToMeetingsListActivity() {
+        startActivity(Intent(this, InstructorMeetingsListActivity::class.java))
     }
 
     override fun logout() {
