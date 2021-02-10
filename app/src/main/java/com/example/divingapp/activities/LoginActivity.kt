@@ -53,8 +53,8 @@ class LoginActivity : AppCompatActivity(), ILoginView{
     private fun goToUserHomeActivity(firebaseUser: FirebaseUser) {
         val intent = Intent(this@LoginActivity, UserHomeActivity::class.java)
         intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
-        intent.putExtra("user_id", firebaseUser.uid)
-        intent.putExtra("email", firebaseUser.email)
+//        intent.putExtra("user_id", firebaseUser.uid)
+//        intent.putExtra("email", firebaseUser.email)
         startActivity(intent)
         finish()
     }
@@ -62,8 +62,8 @@ class LoginActivity : AppCompatActivity(), ILoginView{
     private fun goToInstructorHomeActivity(firebaseUser: FirebaseUser) {
         val intent = Intent(this@LoginActivity, InstructorHomeActivity::class.java)
         intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
-        intent.putExtra("user_id", firebaseUser.uid)
-        intent.putExtra("email", firebaseUser.email)
+//        intent.putExtra("user_id", firebaseUser.uid)
+//        intent.putExtra("email", firebaseUser.email)
         startActivity(intent)
         finish()
     }
@@ -71,8 +71,8 @@ class LoginActivity : AppCompatActivity(), ILoginView{
     private fun goToAdministratorHomeActivity(firebaseUser: FirebaseUser) {
         val intent = Intent(this@LoginActivity, AdministratorHomeActivity::class.java)
         intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
-        intent.putExtra("user_id", firebaseUser.uid)
-        intent.putExtra("email", firebaseUser.email)
+//        intent.putExtra("user_id", firebaseUser.uid)
+//        intent.putExtra("email", firebaseUser.email)
         startActivity(intent)
         finish()
     }

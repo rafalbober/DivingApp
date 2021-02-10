@@ -8,7 +8,7 @@
     tools:context=".activities.instructorActivities.InstructorProfileActivity">
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/bt_reset_instructor"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
@@ -16,16 +16,16 @@
         android:text="Zresetuj hasło"
         android:textColor="@color/black"
         app:backgroundTint="@color/white"
-        app:layout_constraintEnd_toEndOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="@+id/bt_save_instructor"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/button"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintStart_toStartOf="@+id/bt_save_instructor"
+        app:layout_constraintTop_toBottomOf="@+id/bt_save_instructor" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="50dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -39,7 +39,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="60dp"
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
         android:autofillHints=""
@@ -132,7 +132,7 @@
         app:layout_constraintTop_toBottomOf="@+id/et_email_instructor_profile" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/bt_save_instructor"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"

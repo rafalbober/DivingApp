@@ -78,8 +78,8 @@ class RegistrationActivity : AppCompatActivity(), IRegistrationView {
         registerAllUserData(user, firebaseUser.uid)
         val intent: Intent = Intent(this, UserHomeActivity::class.java)
         intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
-        intent.putExtra("user_id", firebaseUser.uid)
-        intent.putExtra("email", firebaseUser.email)
+//        intent.putExtra("user_id", firebaseUser.uid)
+//        intent.putExtra("email", firebaseUser.email)
         startActivity(intent)
         finish()
     }

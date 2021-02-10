@@ -10,39 +10,61 @@ import com.example.divingapp.R
 import com.example.divingapp.View.IInstructorHomeView
 import com.example.divingapp.activities.LoginActivity
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 
 class InstructorHomeActivity : AppCompatActivity(), IInstructorHomeView {
+
+    private lateinit var auth: FirebaseAuth
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_instructor_home)
 
-        val instructorHomePresenter =
-            InstructorHomePresenter(this)
+        val instructorHomePresenter = InstructorHomePresenter(this)
+
+        // Initialize Firebase Auth
+        auth = Firebase.auth
 
         val btProfile: Button = findViewById(R.id.bt_profile_instructor)
         val btUsers: Button = findViewById(R.id.bt_users_instructor)
         val btMeetings: Button = findViewById(R.id.bt_meetings_instructor)
         val btLogout: Button = findViewById(R.id.bt_logout_instructor)
-        val userId = intent.getStringExtra("user_id")
-        val email = intent.getStringExtra("email")
+
+//        val userId = intent.getStringExtra("user_id")
+//        val email = intent.getStringExtra("email")
 
 
-        btLogout.setOnClickListener(View.OnClickListener {
+        btLogout.setOnClickListener {
             instructorHomePresenter.onLogout()
-        })
+        }
 
-        btProfile.setOnClickListener(View.OnClickListener {
-            instructorHomePresenter.onProfileButtonClick()
-        })
+        btProfile.setOnClickListener {
+            goToProfileActivity()
+        }
 
-        btMeetings.setOnClickListener(View.OnClickListener {
-            instructorHomePresenter.onProfileButtonClick()
-        })
+        btMeetings.setOnClickListener {
+            goToMeetingsListActivity()
+        }
 
-        btUsers.setOnClickListener(View.OnClickListener {
-            instructorHomePresenter.onProfileButtonClick()
-        })
+        btUsers.setOnClickListener {
+            goToUsersListActivity()
+        }
 
+    }
+
+    public override fun onStart() {
+        super.onStart()
+        // Check if user is signed in (non-null) and update UI accordingly.
+        val currentUser = auth.currentUser
+        updateUI(currentUser)
+    }
+
+    private fun updateUI(currentUser : FirebaseUser?) {
+        if (currentUser == null) {
+            startActivity(Intent(this, LoginActivity::class.java))
+        }
     }
 
     override fun goToLoginActivity() {
@@ -50,16 +72,25 @@ class InstructorHomeActivity : AppCompatActivity(), IInstructorHomeView {
         finish()
     }
 
-    override fun goToProfileActivity() {
-        startActivity(Intent(this, InstructorProfileActivity::class.java))
+    private fun goToProfileActivity() {
+        val intent = Intent(this, InstructorProfileActivity::class.java)
+//        intent.putExtra("user_id", userId)
+//        intent.putExtra("email", email)
+        startActivity(intent)
     }
 
-    override fun goToUsersListActivity() {
-        startActivity(Intent(this, InstructorUsersListActivity::class.java))
+    private fun goToUsersListActivity() {
+        val intent = Intent(this, InstructorUsersListActivity::class.java)
+//        intent.putExtra("user_id", userId)
+//        intent.putExtra("email", email)
+        startActivity(intent)
     }
 
-    override fun goToMeetingsListActivity() {
-        startActivity(Intent(this, InstructorMeetingsListActivity::class.java))
+    private fun goToMeetingsListActivity() {
+        val intent = Intent(this, InstructorMeetingsListActivity::class.java)
+//        intent.putExtra("user_id", userId)
+//        intent.putExtra("email", email)
+        startActivity(intent)
     }
 
     override fun logout() {
