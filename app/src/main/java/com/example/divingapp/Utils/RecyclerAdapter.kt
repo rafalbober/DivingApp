@@ -9,14 +9,14 @@ import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.divingapp.R
 
-class RecyclerAdapter(private var titles: List<String>, private var details: List<String>, private var images:List<Int>) :
+class RecyclerAdapter(private var names: List<String>, private var surnames: List<String>, private var images:List<Int>) :
 RecyclerView.Adapter<RecyclerAdapter.ViewHolder>(){
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-        val itemTitle: TextView = itemView.findViewById(R.id.tv_title)
-        val itemDetail: TextView = itemView.findViewById(R.id.tv_description)
-        val itemPicture: ImageView = itemView.findViewById(R.id.iv_view)
+        val itemName: TextView = itemView.findViewById(R.id.tv_name_user_list)
+        val itemSurname: TextView = itemView.findViewById(R.id.tv_surname_user_list)
+        val itemPicture: ImageView = itemView.findViewById(R.id.iv_view_user_list)
 
         init {
             itemView.setOnClickListener {
@@ -32,12 +32,12 @@ RecyclerView.Adapter<RecyclerAdapter.ViewHolder>(){
     }
 
     override fun getItemCount(): Int {
-        return titles.size
+        return names.size
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.itemTitle.text = titles[position]
-        holder.itemDetail.text = details[position]
+        holder.itemName.text = names[position]
+        holder.itemSurname.text = surnames[position]
         holder.itemPicture.setImageResource(images[position])
     }
 }

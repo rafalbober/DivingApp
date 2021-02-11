@@ -19,9 +19,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="76ddcf9f-a7e3-4b12-a9a2-41f5cb3f19cc" name="Default Changelist" comment="Init commit">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/Utils/RecyclerAdapter.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/Presenter/Iinterfaces/IInstructorUsersListPresenter.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/Presenter/classes/InstructorUsersListPresenter.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/Utils/ListOfUsers.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/View/IInstructorUsersListView.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/Presenter/Iinterfaces/IInstructorProfilePresenter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/Presenter/Iinterfaces/IInstructorProfilePresenter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/Presenter/classes/InstructorProfilePresenter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/Presenter/classes/InstructorProfilePresenter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/Utils/RecyclerAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/Utils/RecyclerAdapter.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/activities/instructorActivities/InstructorUsersListActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/activities/instructorActivities/InstructorUsersListActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/recycler_view_item.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/single_user_layout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/single_user_layout.xml" afterDir="false" />
     </list>
     <list id="e84fb2dc-ac7c-41f8-bd4e-4547ad93f605" name="Revert &quot;KClass testing&quot;" comment="Revert &quot;KClass testing&quot;&#10;&#10;This reverts commit f0a012c0" />
     <option name="SHOW_DIALOG" value="false" />
@@ -88,17 +96,16 @@
     <key name="android.template.-1761350049">
       <recent name="com.example.divingapp.activities.instructorActivities" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Rafal\AndroidStudioProjects\DivingApp\app\src\main\res\drawable" />
-      <recent name="C:\Users\Rafal\AndroidStudioProjects\DivingApp\app\src\main\res\drawable-v24" />
+    <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
+      <recent name="com.example.divingapp.Presenter.classes" />
+      <recent name="com.example.divingapp.Presenter.Iinterfaces" />
+      <recent name="com.example.divingapp.View" />
     </key>
     <key name="android.template.-1784468105">
       <recent name="com.example.divingapp.activities" />
     </key>
-    <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
-      <recent name="com.example.divingapp.Presenter.classes" />
-      <recent name="com.example.divingapp.View" />
-      <recent name="com.example.divingapp.Presenter.Iinterfaces" />
+    <key name="android.template.-74498852">
+      <recent name="com.example.divingapp.activities.instructorActivities" />
     </key>
     <key name="android.template.841259318">
       <recent name="com.example.divingapp.activities.adminActivities" />
@@ -107,8 +114,9 @@
       <recent name="com.example.divingapp.activities.instructorActivities" />
       <recent name="com.example.divingapp" />
     </key>
-    <key name="android.template.-74498852">
-      <recent name="com.example.divingapp.activities.instructorActivities" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Rafal\AndroidStudioProjects\DivingApp\app\src\main\res\drawable" />
+      <recent name="C:\Users\Rafal\AndroidStudioProjects\DivingApp\app\src\main\res\drawable-v24" />
     </key>
     <key name="android.template.1994979299">
       <recent name="com.example.divingapp" />
@@ -240,10 +248,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="286" y="158" key="#PSD/0.0.1536.824@0.0.1536.824" timestamp="1612526632470" />
-    <state x="176" y="131" key="#com.intellij.ide.util.MemberChooser" timestamp="1612998551178">
+    <state x="176" y="131" key="#com.intellij.ide.util.MemberChooser" timestamp="1613080802069">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="176" y="131" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1612998551178" />
+    <state x="176" y="131" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1613080802069" />
     <state x="499" y="189" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1612534959162">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -252,10 +260,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="358" y="337" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1536.824@0.0.1536.824" timestamp="1612902877067" />
-    <state x="468" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1612460657824">
+    <state x="275" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1613080312642">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="468" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1612460657824" />
+    <state x="275" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1613080312642" />
     <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1612457155380">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -268,6 +276,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="503" y="274" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1536.824@0.0.1536.824" timestamp="1611150710823" />
+    <state x="93" y="93" width="1350" height="638" key="AVDManager" timestamp="1613080470223">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="93" y="93" width="1350" height="638" key="AVDManager/0.0.1536.824@0.0.1536.824" timestamp="1613080470223" />
     <state x="349" y="167" key="AndroidCreateResourceFileDialog" timestamp="1612994452441">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -292,38 +304,38 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="482" y="114" key="Github.UntrackedFilesDialog/0.0.1536.824@0.0.1536.824" timestamp="1610102445662" />
-    <state width="745" height="210" key="GridCell.Tab.0.bottom" timestamp="1612981669358">
+    <state width="1491" height="210" key="GridCell.Tab.0.bottom" timestamp="1613086304773">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="745" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1612981669358" />
-    <state width="745" height="210" key="GridCell.Tab.0.center" timestamp="1612981669358">
+    <state width="1491" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1613086304773" />
+    <state width="1491" height="210" key="GridCell.Tab.0.center" timestamp="1613086304772">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="745" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1612981669358" />
-    <state width="745" height="210" key="GridCell.Tab.0.left" timestamp="1612981669358">
+    <state width="1491" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1613086304772" />
+    <state width="1491" height="210" key="GridCell.Tab.0.left" timestamp="1613086304772">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="745" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1612981669358" />
-    <state width="745" height="210" key="GridCell.Tab.0.right" timestamp="1612981669358">
+    <state width="1491" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1613086304772" />
+    <state width="1491" height="210" key="GridCell.Tab.0.right" timestamp="1613086304773">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="745" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1612981669358" />
-    <state width="1491" height="2" key="GridCell.Tab.1.bottom" timestamp="1612530119638">
+    <state width="1491" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1613086304773" />
+    <state width="1491" height="246" key="GridCell.Tab.1.bottom" timestamp="1613073198017">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="2" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1612530119638" />
-    <state width="1491" height="2" key="GridCell.Tab.1.center" timestamp="1612530119637">
+    <state width="1491" height="246" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1613073198017" />
+    <state width="1491" height="246" key="GridCell.Tab.1.center" timestamp="1613073198017">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="2" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1612530119637" />
-    <state width="1491" height="2" key="GridCell.Tab.1.left" timestamp="1612530119637">
+    <state width="1491" height="246" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1613073198017" />
+    <state width="1491" height="246" key="GridCell.Tab.1.left" timestamp="1613073198017">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="2" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1612530119637" />
-    <state width="1491" height="2" key="GridCell.Tab.1.right" timestamp="1612530119638">
+    <state width="1491" height="246" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1613073198017" />
+    <state width="1491" height="246" key="GridCell.Tab.1.right" timestamp="1613073198017">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="2" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1612530119638" />
+    <state width="1491" height="246" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1613073198017" />
     <state x="497" y="115" key="RollbackChangesDialog" timestamp="1612386055445">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -344,10 +356,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1612386037618" />
-    <state x="408" y="27" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1612978277520">
+    <state x="408" y="27" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1613085304175">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="408" y="27" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.824@0.0.1536.824" timestamp="1612978277520" />
+    <state x="408" y="27" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.824@0.0.1536.824" timestamp="1613085304175" />
     <state x="576" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1610100248604">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -356,20 +368,17 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="566" y="277" key="git4idea.rebase.GitRebaseDialog/0.0.1536.824@0.0.1536.824" timestamp="1610100947983" />
-    <state x="425" y="187" key="run.anything.popup" timestamp="1611515984204">
+    <state x="545" y="185" key="refactoring.ChangeSignatureDialog" timestamp="1613076652265">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1611515984204" />
+    <state x="545" y="185" key="refactoring.ChangeSignatureDialog/0.0.1536.824@0.0.1536.824" timestamp="1613076652265" />
+    <state x="425" y="187" key="run.anything.popup" timestamp="1613076677264">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1613076677264" />
     <state x="430" y="146" width="672" height="678" key="search.everywhere.popup" timestamp="1611176853720">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="430" y="146" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1611176853720" />
-  </component>
-  <component name="XDebuggerManager">
-    <watches-manager>
-      <configuration name="app">
-        <watch expression="userRole" language="kotlin" />
-      </configuration>
-    </watches-manager>
   </component>
 </project>

@@ -2,13 +2,11 @@ package com.example.divingapp.Presenter.Iinterfaces
 
 import android.widget.EditText
 import com.example.divingapp.View.IInstructorProfileView
+import com.example.divingapp.View.IInstructorUsersListView
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.FirebaseDatabase
 
-interface IInstructorProfilePresenter {
+interface IInstructorUsersListPresenter {
 
-    val instructorUsersListView: IInstructorProfileView
-
-    fun onStart(firebaseUser: FirebaseUser, database: FirebaseDatabase)
-    fun onSave(firebaseUser: FirebaseUser, database: FirebaseDatabase)
+    val instructorUsersListView: IInstructorUsersListView
 }
