@@ -14,6 +14,42 @@
     <string name="goToRegistration">Nie masz konta? Zarejestruj się!</string>
     <string name="logout">Wyloguj się</string>
     <string name="registration">Rejestracja</string>
+    <string-array name="bottle">
+        <item>nieustalone</item>
+        <item>normalnie</item>
+        <item>wyżej</item>
+        <item>niżej</item>
+    </string-array>
+    <string-array name="moving">
+        <item>nieustalone</item>
+        <item>samodzielne</item>
+        <item>napęd</item>
+        <item>napęd częściowy</item>
+    </string-array>
+    <string-array name="jacket">
+        <item>nieustalone</item>
+        <item>XS</item>
+        <item>S</item>
+        <item>M</item>
+        <item>L</item>
+        <item>XL</item>
+    </string-array>
+    <string-array name="warmer">
+        <item>nieustalone</item>
+        <item>tak</item>
+        <item>nie</item>
+    </string-array>
+    <string-array name="foam">
+        <item>nieustalone</item>
+        <item>długa</item>
+        <item>krótka</item>
+    </string-array>
+    <string-array name="foam2">
+        <item>nieustalone</item>
+        <item>3mm</item>
+        <item>5mm</item>
+        <item>7mm</item>
+    </string-array>
     <!--    <string name="app_name">DivingApp</string>-->
     <!--    <string name="app_name">DivingApp</string>-->
     <!--    <string name="app_name">DivingApp</string>-->

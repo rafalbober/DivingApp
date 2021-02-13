@@ -64,7 +64,7 @@ class InstructorUserDetailsActivity : AppCompatActivity(), IInstructorUserDetail
     }
 
     override fun goToWeightsActivity() {
-        val intent = Intent(this, InstructorUserWeightsActivity::class.java)
+        val intent = Intent(this, InstructorUserInfoActivity::class.java)
         intent.putExtra("userId", userId)
         startActivity(intent)
     }
