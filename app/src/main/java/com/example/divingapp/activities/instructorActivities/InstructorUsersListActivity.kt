@@ -60,10 +60,12 @@ class InstructorUsersListActivity : AppCompatActivity(), IInstructorUsersListVie
         adapter.stopListening()
     }
 
-    override fun onNoteClick(position: Int, userId: String) {
-        Log.d("TUTAJ", userId)
+    override fun onUserClick(position: Int, userId: String, name: String, surname: String) {
+        Log.d("TUTAJ", "$userId $name $surname")
         val intent = Intent(this, LoginActivity::class.java)
-        //intent.putExtra("userId", userId)
+        intent.putExtra("userId", userId)
+        intent.putExtra("name", name)
+        intent.putExtra("surname", surname)
         startActivity(intent)
     }
 

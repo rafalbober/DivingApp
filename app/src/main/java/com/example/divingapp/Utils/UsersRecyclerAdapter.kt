@@ -31,7 +31,7 @@ class UsersRecyclerAdapter(options: FirebaseRecyclerOptions<UserData>, onNoteLis
                         "You clicked on item # ${position + 1}",
                         Toast.LENGTH_SHORT
                 ).show()
-                onNoteListener.onNoteClick(adapterPosition, userId)
+                onNoteListener.onUserClick(adapterPosition, userId, itemName.text.toString(), itemSurname.text.toString())
             }
         }
     }
@@ -51,7 +51,7 @@ class UsersRecyclerAdapter(options: FirebaseRecyclerOptions<UserData>, onNoteLis
 
     interface OnNoteListener
     {
-        fun onNoteClick(position: Int, userId: String)
+        fun onUserClick(position: Int, userId: String, name: String, surname: String)
     }
 
 }
