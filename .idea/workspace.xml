@@ -19,7 +19,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="76ddcf9f-a7e3-4b12-a9a2-41f5cb3f19cc" name="Default Changelist" comment="Init commit">
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/Utils/UsersRecyclerAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/Utils/UsersRecyclerAdapter.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/Presenter/Iinterfaces/IInstructorUserDetailsPresenter.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/Presenter/classes/InstructorUserDetailsPresenter.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/View/IInstructorUserDetailsView.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/activities/instructorActivities/InstructorUserContactActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/activities/instructorActivities/InstructorUserDetailsActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/activities/instructorActivities/InstructorUserSkillsActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/activities/instructorActivities/InstructorUserWeightsActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_instructor_user_contact.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_instructor_user_details.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_instructor_user_skills.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_instructor_user_weights.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/View/IInstructorUsersListView.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/View/IInstructorUsersListView.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/activities/instructorActivities/InstructorUsersListActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/activities/instructorActivities/InstructorUsersListActivity.kt" afterDir="false" />
     </list>
     <list id="e84fb2dc-ac7c-41f8-bd4e-4547ad93f605" name="Revert &quot;KClass testing&quot;" comment="Revert &quot;KClass testing&quot;&#10;&#10;This reverts commit f0a012c0" />
@@ -39,11 +53,11 @@
       <list>
         <option value="Class" />
         <option value="Kotlin Enum" />
-        <option value="Kotlin Interface" />
         <option value="resourceFile" />
         <option value="layoutResourceFile" />
         <option value="layoutResourceFile_vertical" />
         <option value="Kotlin Class" />
+        <option value="Kotlin Interface" />
       </list>
     </option>
   </component>
@@ -88,13 +102,16 @@
       <recent name="com.example.divingapp.activities.instructorActivities" />
     </key>
     <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
-      <recent name="com.example.divingapp.View" />
-      <recent name="com.example.divingapp.Presenter.Iinterfaces" />
       <recent name="com.example.divingapp.Presenter.classes" />
+      <recent name="com.example.divingapp.Presenter.Iinterfaces" />
+      <recent name="com.example.divingapp.View" />
       <recent name="com.example.divingapp.Utils" />
     </key>
     <key name="android.template.-1784468105">
       <recent name="com.example.divingapp.activities" />
+    </key>
+    <key name="android.template.-2010243633">
+      <recent name="com.example.divingapp.activities.instructorActivities" />
     </key>
     <key name="android.template.841259318">
       <recent name="com.example.divingapp.activities.adminActivities" />
@@ -241,10 +258,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="286" y="158" key="#PSD/0.0.1536.824@0.0.1536.824" timestamp="1612526632470" />
-    <state x="176" y="131" key="#com.intellij.ide.util.MemberChooser" timestamp="1613214021696">
+    <state x="176" y="131" key="#com.intellij.ide.util.MemberChooser" timestamp="1613235111056">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="176" y="131" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1613214021696" />
+    <state x="176" y="131" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1613235111056" />
     <state x="499" y="189" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1612534959162">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -273,10 +290,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="93" y="93" width="1350" height="638" key="AVDManager/0.0.1536.824@0.0.1536.824" timestamp="1613221007708" />
-    <state x="349" y="167" key="AndroidCreateResourceFileDialog" timestamp="1612994452441">
+    <state x="349" y="167" key="AndroidCreateResourceFileDialog" timestamp="1613235712640">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="349" y="167" key="AndroidCreateResourceFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1612994452441" />
+    <state x="349" y="167" key="AndroidCreateResourceFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1613235712640" />
     <state x="614" y="202" key="AndroidCreateXmlResourceDialog" timestamp="1612824007688">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -297,22 +314,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="482" y="114" key="Github.UntrackedFilesDialog/0.0.1536.824@0.0.1536.824" timestamp="1610102445662" />
-    <state width="1491" height="210" key="GridCell.Tab.0.bottom" timestamp="1613228324535">
+    <state width="745" height="210" key="GridCell.Tab.0.bottom" timestamp="1613235809898">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1613228324535" />
-    <state width="1491" height="210" key="GridCell.Tab.0.center" timestamp="1613228324534">
+    <state width="745" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1613235809898" />
+    <state width="745" height="210" key="GridCell.Tab.0.center" timestamp="1613235809898">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1613228324534" />
-    <state width="1491" height="210" key="GridCell.Tab.0.left" timestamp="1613228324534">
+    <state width="745" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1613235809898" />
+    <state width="745" height="210" key="GridCell.Tab.0.left" timestamp="1613235809898">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1613228324534" />
-    <state width="1491" height="210" key="GridCell.Tab.0.right" timestamp="1613228324534">
+    <state width="745" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1613235809898" />
+    <state width="745" height="210" key="GridCell.Tab.0.right" timestamp="1613235809898">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1613228324534" />
+    <state width="745" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1613235809898" />
     <state width="1491" height="246" key="GridCell.Tab.1.bottom" timestamp="1613073198017">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

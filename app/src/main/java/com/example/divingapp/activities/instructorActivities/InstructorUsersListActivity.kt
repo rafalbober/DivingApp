@@ -61,16 +61,11 @@ class InstructorUsersListActivity : AppCompatActivity(), IInstructorUsersListVie
     }
 
     override fun onUserClick(position: Int, userId: String, name: String, surname: String) {
-        Log.d("TUTAJ", "$userId $name $surname")
-        val intent = Intent(this, LoginActivity::class.java)
+        val intent = Intent(this, InstructorUserDetailsActivity::class.java)
         intent.putExtra("userId", userId)
         intent.putExtra("name", name)
         intent.putExtra("surname", surname)
         startActivity(intent)
-    }
-
-    override fun goToUserDetails() {
-        TODO("Not yet implemented")
     }
 }
 
