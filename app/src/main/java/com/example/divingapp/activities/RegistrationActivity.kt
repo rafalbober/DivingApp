@@ -76,7 +76,7 @@ class RegistrationActivity : AppCompatActivity(), IRegistrationView {
     override fun onSuccessfulRegistration(task: Task<AuthResult>, user: User) {
         val firebaseUser: FirebaseUser = task.result!!.user!!
         registerAllUserData(user, firebaseUser.uid)
-        val intent: Intent = Intent(this, UserHomeActivity::class.java)
+        val intent = Intent(this, UserHomeActivity::class.java)
         intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
         startActivity(intent)
         finish()

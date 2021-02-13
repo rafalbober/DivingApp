@@ -11,8 +11,8 @@ import com.example.divingapp.R
 import com.firebase.ui.database.FirebaseRecyclerAdapter
 import com.firebase.ui.database.FirebaseRecyclerOptions
 
-class RecyclerAdapterMeetings(options: FirebaseRecyclerOptions<Meeting>) :
-    FirebaseRecyclerAdapter<Meeting, RecyclerAdapterMeetings.ViewHolder>(options) {
+class MeetingsRecyclerAdapter(options: FirebaseRecyclerOptions<Meeting>) :
+    FirebaseRecyclerAdapter<Meeting, MeetingsRecyclerAdapter.ViewHolder>(options) {
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 

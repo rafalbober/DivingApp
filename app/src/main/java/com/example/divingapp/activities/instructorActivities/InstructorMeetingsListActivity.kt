@@ -5,10 +5,9 @@ import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.divingapp.Model.Meeting
-import com.example.divingapp.Model.UserData
 import com.example.divingapp.R
-import com.example.divingapp.Utils.RecyclerAdapterMeetings
-import com.example.divingapp.Utils.RecyclerAdapterUsers
+import com.example.divingapp.Utils.MeetingsRecyclerAdapter
+import com.example.divingapp.View.IInstructorMeetingsListView
 import com.firebase.ui.database.FirebaseRecyclerOptions
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
@@ -16,12 +15,12 @@ import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.Query
 
-class InstructorMeetingsListActivity : AppCompatActivity() {
+class InstructorMeetingsListActivity : AppCompatActivity(), IInstructorMeetingsListView {
 
     private lateinit var auth: FirebaseAuth
     private lateinit var firebaseUser: FirebaseUser
     private lateinit var database: FirebaseDatabase
-    private lateinit var adapter: RecyclerAdapterMeetings
+    private lateinit var adapter: MeetingsRecyclerAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,7 +40,7 @@ class InstructorMeetingsListActivity : AppCompatActivity() {
                 .setQuery(query, Meeting::class.java)
                 .build()
 
-        adapter = RecyclerAdapterMeetings(options)
+        adapter = MeetingsRecyclerAdapter(options)
         rvRecyclerView.adapter = adapter
 
     }
