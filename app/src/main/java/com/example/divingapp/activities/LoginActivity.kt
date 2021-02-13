@@ -50,29 +50,23 @@ class LoginActivity : AppCompatActivity(), ILoginView{
         Toast.makeText(this, result, Toast.LENGTH_SHORT).show()
     }
 
-    private fun goToUserHomeActivity(firebaseUser: FirebaseUser) {
+    private fun goToUserHomeActivity() {
         val intent = Intent(this@LoginActivity, UserHomeActivity::class.java)
         intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
-//        intent.putExtra("user_id", firebaseUser.uid)
-//        intent.putExtra("email", firebaseUser.email)
         startActivity(intent)
         finish()
     }
 
-    private fun goToInstructorHomeActivity(firebaseUser: FirebaseUser) {
+    private fun goToInstructorHomeActivity() {
         val intent = Intent(this@LoginActivity, InstructorHomeActivity::class.java)
         intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
-//        intent.putExtra("user_id", firebaseUser.uid)
-//        intent.putExtra("email", firebaseUser.email)
         startActivity(intent)
         finish()
     }
 
-    private fun goToAdministratorHomeActivity(firebaseUser: FirebaseUser) {
+    private fun goToAdministratorHomeActivity() {
         val intent = Intent(this@LoginActivity, AdministratorHomeActivity::class.java)
         intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
-//        intent.putExtra("user_id", firebaseUser.uid)
-//        intent.putExtra("email", firebaseUser.email)
         startActivity(intent)
         finish()
     }
@@ -98,7 +92,7 @@ class LoginActivity : AppCompatActivity(), ILoginView{
 
             override fun onDataChange(snapshot: DataSnapshot) {
                 if (snapshot.exists())
-                    goToUserHomeActivity(firebaseUser)
+                    goToUserHomeActivity()
             }
         })
 
@@ -109,7 +103,7 @@ class LoginActivity : AppCompatActivity(), ILoginView{
 
             override fun onDataChange(snapshot: DataSnapshot) {
                 if (snapshot.exists()) {
-                    goToInstructorHomeActivity(firebaseUser)
+                    goToInstructorHomeActivity()
                 }
             }
         })
@@ -121,7 +115,7 @@ class LoginActivity : AppCompatActivity(), ILoginView{
 
             override fun onDataChange(snapshot: DataSnapshot) {
                 if (snapshot.exists())
-                    goToAdministratorHomeActivity(firebaseUser)
+                    goToAdministratorHomeActivity()
             }
         })
     }

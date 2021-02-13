@@ -4,9 +4,9 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.divingapp.Model.Users
+import com.example.divingapp.Model.UserData
 import com.example.divingapp.R
-import com.example.divingapp.Utils.RecyclerAdapter
+import com.example.divingapp.Utils.RecyclerAdapterUsers
 import com.firebase.ui.database.FirebaseRecyclerOptions
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
@@ -20,7 +20,7 @@ class InstructorUsersListActivity : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
     private lateinit var firebaseUser: FirebaseUser
     private lateinit var database: FirebaseDatabase
-    private lateinit var adapter: RecyclerAdapter
+    private lateinit var adapter: RecyclerAdapterUsers
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,11 +36,11 @@ class InstructorUsersListActivity : AppCompatActivity() {
         val reference: DatabaseReference = database.getReference("Users")
 
         val query: Query = reference.orderByChild("InstructorId").equalTo(firebaseUser.uid)
-        val options: FirebaseRecyclerOptions<Users> = FirebaseRecyclerOptions.Builder<Users>()
-            .setQuery(query, Users::class.java)
+        val options: FirebaseRecyclerOptions<UserData> = FirebaseRecyclerOptions.Builder<UserData>()
+            .setQuery(query, UserData::class.java)
             .build()
 
-        adapter = RecyclerAdapter(options)
+        adapter = RecyclerAdapterUsers(options)
         rvRecyclerView.adapter = adapter
 
     }

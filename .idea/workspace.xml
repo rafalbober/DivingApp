@@ -19,33 +19,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="76ddcf9f-a7e3-4b12-a9a2-41f5cb3f19cc" name="Default Changelist" comment="Init commit">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_arch_core_core_common_2_1_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_asynclayoutinflater_asynclayoutinflater_1_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_documentfile_documentfile_1_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_legacy_legacy_support_core_ui_1_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_legacy_legacy_support_core_utils_1_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_legacy_legacy_support_v4_1_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_runtime_2_2_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_viewmodel_2_2_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_media_media_1_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_print_print_1_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_slidingpanelayout_slidingpanelayout_1_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_swiperefreshlayout_swiperefreshlayout_1_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_firebaseui_firebase_ui_common_7_1_1_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_firebaseui_firebase_ui_database_7_1_1_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/Model/Users.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/Utils/RecyclerAdapterExample.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_arch_core_core_common_2_1_0_rc01.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_common_2_2_0_alpha02.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_common_2_2_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_runtime_2_2_0_alpha02_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_viewmodel_2_1_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/app/DivingApp.app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/DivingApp.app.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/Model/Meeting.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/single_meeting_layout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/Utils/ListOfUsers.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/Model/Users.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/Model/UserData.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/Utils/RecyclerAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/Utils/RecyclerAdapter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/Utils/RecyclerAdapterExample.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/Utils/RecyclerAdapterExample.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/activities/LoginActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/activities/LoginActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/activities/RegistrationActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/activities/RegistrationActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/activities/adminActivities/AdministratorHomeActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/activities/adminActivities/AdministratorHomeActivity.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/activities/instructorActivities/InstructorUsersListActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/activities/instructorActivities/InstructorUsersListActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/activities/userActivities/UserHomeActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/activities/userActivities/UserHomeActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_instructor_meetings_list.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_instructor_meetings_list.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/single_user_layout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/single_user_layout.xml" afterDir="false" />
     </list>
     <list id="e84fb2dc-ac7c-41f8-bd4e-4547ad93f605" name="Revert &quot;KClass testing&quot;" comment="Revert &quot;KClass testing&quot;&#10;&#10;This reverts commit f0a012c0" />
     <option name="SHOW_DIALOG" value="false" />
@@ -91,7 +77,7 @@
     <property name="android-custom-viewC:/Users/Rafal/.gradle/caches/modules-2/files-2.1/com.google.android.material/material/1.2.1/37d55d5141066b3d118d24232fa7025b65eb3a74/material-1.2.1-sources.jar!/com/google/android/material/button/MaterialButton.java_SELECTED" value="MaterialButton" />
     <property name="android-custom-viewC:/Users/Rafal/AppData/Local/Android/Sdk/sources/android-29/android/view/View.java_SELECTED" value="View" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/drawable" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/layout" />
     <property name="multi-representation-previewC:/Users/Rafal/.gradle/caches/modules-2/files-2.1/com.google.android.material/material/1.2.1/37d55d5141066b3d118d24232fa7025b65eb3a74/material-1.2.1-sources.jar!/com/google/android/material/button/MaterialButton.java_selected" value="Custom views" />
     <property name="multi-representation-previewC:/Users/Rafal/AppData/Local/Android/Sdk/sources/android-29/android/view/View.java_selected" value="Custom views" />
     <property name="project.structure.last.edited" value="Dependencies" />
@@ -120,9 +106,6 @@
     <key name="android.template.-1784468105">
       <recent name="com.example.divingapp.activities" />
     </key>
-    <key name="android.template.-74498852">
-      <recent name="com.example.divingapp.activities.instructorActivities" />
-    </key>
     <key name="android.template.841259318">
       <recent name="com.example.divingapp.activities.adminActivities" />
     </key>
@@ -130,7 +113,11 @@
       <recent name="com.example.divingapp.activities.instructorActivities" />
       <recent name="com.example.divingapp" />
     </key>
+    <key name="android.template.-74498852">
+      <recent name="com.example.divingapp.activities.instructorActivities" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Rafal\AndroidStudioProjects\DivingApp\app\src\main\res\layout" />
       <recent name="C:\Users\Rafal\AndroidStudioProjects\DivingApp\app\src\main\res\drawable" />
       <recent name="C:\Users\Rafal\AndroidStudioProjects\DivingApp\app\src\main\res\drawable-v24" />
     </key>

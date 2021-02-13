@@ -16,17 +16,9 @@
         android:id="@+id/rl_wrapper"
         android:padding="20dp">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/iv_view_meeting_list"
-            android:layout_centerVertical="true"
-            android:layout_margin="10dp"
-            android:src="@mipmap/ic_launcher_round"/>
-
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="357dp"
+            android:layout_height="213dp"
             android:layout_alignTop="@+id/iv_view_meeting_list"
             android:layout_alignBottom="@+id/iv_view_meeting_list"
             android:layout_toEndOf="@+id/iv_view_meeting_list"
@@ -35,22 +27,34 @@
 
             <TextView
                 android:id="@+id/tv_userName_meeting_list"
-                android:layout_width="wrap_content"
+                android:layout_width="333dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginLeft="10dp"
-                android:text="@string/name"
+                android:layout_marginTop="8dp"
+                android:text="Imię Nazwisko"
                 android:textColor="@android:color/black"
                 android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/tv_datetime_meeting_list"
-                android:layout_width="wrap_content"
+                android:layout_width="335dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginLeft="10dp"
-                android:text="@string/surname"
-                android:textColor="@android:color/black"
+                android:text="00:00:0000, 00:00"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_description_meeting_list"
+                android:layout_width="337dp"
+                android:layout_height="119dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="Opis"
+                android:textColor="@android:color/darker_gray"
                 android:textSize="20sp" />
 
         </LinearLayout>

@@ -1,6 +1,6 @@
 package com.example.divingapp.Model
 
-class Users {
+class UserData {
     var Name: String? = null
     var Surname: String? = null
 
@@ -9,7 +9,4 @@ class Users {
         this.Name = Name
         this.Surname = Surname
     }
-
-
-
 }

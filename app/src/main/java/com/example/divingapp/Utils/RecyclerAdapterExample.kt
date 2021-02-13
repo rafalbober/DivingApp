@@ -14,9 +14,9 @@ RecyclerView.Adapter<RecyclerAdapterExample.ViewHolder>(){
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-        val itemName: TextView = itemView.findViewById(R.id.tv_name_user_list)
-        val itemSurname: TextView = itemView.findViewById(R.id.tv_surname_user_list)
-        val itemPicture: ImageView = itemView.findViewById(R.id.iv_view_user_list)
+        val itemName: TextView = itemView.findViewById(R.id.tv_userName_meeting_list)
+        val itemSurname: TextView = itemView.findViewById(R.id.tv_datetime_meeting_list)
+        val itemPicture: ImageView = itemView.findViewById(R.id.iv_view_meeting_list)
 
         init {
             itemView.setOnClickListener {

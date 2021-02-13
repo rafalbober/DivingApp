@@ -78,8 +78,6 @@ class RegistrationActivity : AppCompatActivity(), IRegistrationView {
         registerAllUserData(user, firebaseUser.uid)
         val intent: Intent = Intent(this, UserHomeActivity::class.java)
         intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
-//        intent.putExtra("user_id", firebaseUser.uid)
-//        intent.putExtra("email", firebaseUser.email)
         startActivity(intent)
         finish()
     }
@@ -92,6 +90,7 @@ class RegistrationActivity : AppCompatActivity(), IRegistrationView {
         reference.child(userId).child("Surname").setValue(user.surname);
         reference.child(userId).child("Email").setValue(user.email);
         reference.child(userId).child("PhoneNumber").setValue(user.phoneNumber);
+        reference.child(userId).child("Id").setValue(userId);
     }
 
 

@@ -20,8 +20,7 @@ class AdministratorHomeActivity : AppCompatActivity(), IAdministratorHomeView {
         val administratorHomePresenter = AdministratorHomePresenter(this)
 
         val btLogout: Button = findViewById(R.id.bt_logout_administrator)
-        val userId = intent.getStringExtra("user_id")
-        val email = intent.getStringExtra("email")
+
 
 
         btLogout.setOnClickListener(View.OnClickListener {
