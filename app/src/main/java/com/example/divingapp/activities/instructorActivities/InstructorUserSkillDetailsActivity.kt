@@ -50,7 +50,14 @@ class InstructorUserSkillDetailsActivity : AppCompatActivity() {
         tvSkill.text = skill
 
         retrieveDataAndSetValues()
+        retrieveDataAndSetDescription()
         saveCheckBoxesValues()
+        Log.d("Ok", "generateChildName: " + skill + " " + generateChildName())
+    }
+
+    override fun onStop() {
+        super.onStop()
+        saveDescription()
     }
 
     private fun setCheckBoxValue(value: String)
@@ -76,7 +83,7 @@ class InstructorUserSkillDetailsActivity : AppCompatActivity() {
             override fun onDataChange(snapshot: DataSnapshot) {
                 if(snapshot.exists())
                 {
-                    setCheckBoxValue(snapshot.toString())
+                    setCheckBoxValue(snapshot.value.toString())
                 }
             }
 
@@ -85,9 +92,9 @@ class InstructorUserSkillDetailsActivity : AppCompatActivity() {
 
     private fun generateChildName() : String
     {
-        when (skill)
+        when (skill.decapitalize())
         {
-            "Kokos" -> return "1a"
+            "kokos" -> return "1a"
             "obrót plecy brzuch z automatem w ustach" -> return "1b"
             "manometr" -> return "1c"
             "znaki" -> return "1d"
@@ -157,5 +164,36 @@ class InstructorUserSkillDetailsActivity : AppCompatActivity() {
 
             reference.setValue("4")
         }
+    }
+
+    private fun setDescription(value: String)
+    {
+        etDescription.setText(value)
+    }
+
+    private fun retrieveDataAndSetDescription()
+    {
+        val childName = generateChildName() + "_description"
+        val reference = database.getReference("Users").child(userId).child("SkillsDetails").child(childName)
+        reference.addListenerForSingleValueEvent(object: ValueEventListener {
+            override fun onCancelled(error: DatabaseError) {
+                Toast.makeText(this@InstructorUserSkillDetailsActivity, "Wystąpił błąd podczas pobierania danych.", Toast.LENGTH_SHORT).show()
+            }
+
+            override fun onDataChange(snapshot: DataSnapshot) {
+                if(snapshot.exists())
+                {
+                    setDescription(snapshot.value.toString())
+                }
+            }
+
+        })
+    }
+
+    private fun saveDescription()
+    {
+        val childName = generateChildName() + "_description"
+        val reference = database.getReference("Users").child(userId).child("SkillsDetails").child(childName)
+        reference.setValue(etDescription.text.toString())
     }
 }

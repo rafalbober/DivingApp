@@ -117,7 +117,7 @@
         android:paddingRight="10dp"
         android:paddingBottom="5dp"
         android:textColor="@color/black"
-        android:textColorHint="@color/black"
+        android:textColorHint="#8A8888"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
