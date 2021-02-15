@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
@@ -21,7 +22,6 @@ class UsersRecyclerAdapter(options: FirebaseRecyclerOptions<UserData>, onNoteLis
         val itemName: TextView = itemView.findViewById(R.id.tv_name_users_list)
         val itemSurname: TextView = itemView.findViewById(R.id.tv_surname_users_list)
         lateinit var userId: String
-//        val itemPicture: ImageView = itemView.findViewById(R.id.iv_view_user_list)
 
         init {
             itemView.setOnClickListener {

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -8,27 +9,35 @@
     android:clickable="true"
     android:focusable="true"
     android:foreground="?selectableItemBackground"
-    app:cardCornerRadius="10dp">
+    app:cardCornerRadius="30dp">
 
     <RelativeLayout
+        android:id="@+id/rl_wrapper"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/rl_wrapper"
+        android:background="#76BBEA"
         android:padding="20dp">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/iv_view_users_list"
+            android:layout_width="82dp"
+            android:layout_height="83dp"
             android:layout_centerVertical="true"
-            android:layout_margin="10dp"
-            android:src="@mipmap/ic_launcher_round"/>
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/profilowe2" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_alignTop="@+id/iv_view_users_list"
             android:layout_alignBottom="@+id/iv_view_users_list"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="0dp"
             android:layout_toEndOf="@+id/iv_view_users_list"
             android:layout_toRightOf="@+id/iv_view_users_list"
             android:orientation="vertical">
@@ -39,6 +48,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:gravity="center_horizontal"
                 android:text="@string/name"
                 android:textColor="@android:color/black"
                 android:textSize="20sp" />

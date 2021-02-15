@@ -19,7 +19,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="76ddcf9f-a7e3-4b12-a9a2-41f5cb3f19cc" name="Default Changelist" comment="Init commit">
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/activities/instructorActivities/InstructorUserContactActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/activities/instructorActivities/InstructorUserContactActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__de_hdodenhof_circleimageview_3_1_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/circle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/img.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/profilowe2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/app/DivingApp.app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/DivingApp.app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/Utils/UsersRecyclerAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/divingapp/Utils/UsersRecyclerAdapter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_instructor_profile.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_instructor_profile.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/recycler_view_item.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/single_user_layout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/single_user_layout.xml" afterDir="false" />
     </list>
     <list id="e84fb2dc-ac7c-41f8-bd4e-4547ad93f605" name="Revert &quot;KClass testing&quot;" comment="Revert &quot;KClass testing&quot;&#10;&#10;This reverts commit f0a012c0" />
     <option name="SHOW_DIALOG" value="false" />
@@ -38,10 +49,10 @@
       <list>
         <option value="Class" />
         <option value="Kotlin Enum" />
-        <option value="layoutResourceFile_vertical" />
         <option value="Kotlin Class" />
         <option value="Kotlin Interface" />
         <option value="layoutResourceFile" />
+        <option value="layoutResourceFile_vertical" />
         <option value="resourceFile" />
       </list>
     </option>
@@ -65,7 +76,7 @@
     <property name="android-custom-viewC:/Users/Rafal/.gradle/caches/modules-2/files-2.1/com.google.android.material/material/1.2.1/37d55d5141066b3d118d24232fa7025b65eb3a74/material-1.2.1-sources.jar!/com/google/android/material/button/MaterialButton.java_SELECTED" value="MaterialButton" />
     <property name="android-custom-viewC:/Users/Rafal/AppData/Local/Android/Sdk/sources/android-29/android/view/View.java_SELECTED" value="View" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/layout" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/drawable" />
     <property name="multi-representation-previewC:/Users/Rafal/.gradle/caches/modules-2/files-2.1/com.google.android.material/material/1.2.1/37d55d5141066b3d118d24232fa7025b65eb3a74/material-1.2.1-sources.jar!/com/google/android/material/button/MaterialButton.java_selected" value="Custom views" />
     <property name="multi-representation-previewC:/Users/Rafal/AppData/Local/Android/Sdk/sources/android-29/android/view/View.java_selected" value="Custom views" />
     <property name="project.structure.last.edited" value="Dependencies" />
@@ -112,8 +123,8 @@
       <recent name="com.example.divingapp.activities.instructorActivities" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Rafal\AndroidStudioProjects\DivingApp\app\src\main\res\layout" />
       <recent name="C:\Users\Rafal\AndroidStudioProjects\DivingApp\app\src\main\res\drawable" />
+      <recent name="C:\Users\Rafal\AndroidStudioProjects\DivingApp\app\src\main\res\layout" />
       <recent name="C:\Users\Rafal\AndroidStudioProjects\DivingApp\app\src\main\res\drawable-v24" />
     </key>
     <key name="android.template.1994979299">
@@ -265,10 +276,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="275" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1613227604422" />
-    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1612457155380">
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1613417860271">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1612457155380" />
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1613417860271" />
     <state x="548" y="191" width="647" height="442" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog" timestamp="1612534960040">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -281,10 +292,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="93" y="93" width="1350" height="638" key="AVDManager/0.0.1536.824@0.0.1536.824" timestamp="1613221007708" />
-    <state x="349" y="167" key="AndroidCreateResourceFileDialog" timestamp="1613402066614">
+    <state x="349" y="167" key="AndroidCreateResourceFileDialog" timestamp="1613418632773">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="349" y="167" key="AndroidCreateResourceFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1613402066614" />
+    <state x="349" y="167" key="AndroidCreateResourceFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1613418632773" />
     <state x="614" y="202" key="AndroidCreateXmlResourceDialog" timestamp="1612824007688">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -305,22 +316,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="482" y="114" key="Github.UntrackedFilesDialog/0.0.1536.824@0.0.1536.824" timestamp="1610102445662" />
-    <state width="1491" height="210" key="GridCell.Tab.0.bottom" timestamp="1613415904051">
+    <state width="1491" height="210" key="GridCell.Tab.0.bottom" timestamp="1613417439817">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1613415904051" />
-    <state width="1491" height="210" key="GridCell.Tab.0.center" timestamp="1613415904050">
+    <state width="1491" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1613417439817" />
+    <state width="1491" height="210" key="GridCell.Tab.0.center" timestamp="1613417439817">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1613415904050" />
-    <state width="1491" height="210" key="GridCell.Tab.0.left" timestamp="1613415904050">
+    <state width="1491" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1613417439817" />
+    <state width="1491" height="210" key="GridCell.Tab.0.left" timestamp="1613417439816">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1613415904050" />
-    <state width="1491" height="210" key="GridCell.Tab.0.right" timestamp="1613415904051">
+    <state width="1491" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1613417439816" />
+    <state width="1491" height="210" key="GridCell.Tab.0.right" timestamp="1613417439817">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1613415904051" />
+    <state width="1491" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1613417439817" />
     <state width="1491" height="246" key="GridCell.Tab.1.bottom" timestamp="1613073198017">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -349,10 +360,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="359" y="148" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1610100396426" />
-    <state x="584" y="190" key="chooseDestDirectoryDialog" timestamp="1612819341165">
+    <state x="584" y="190" key="chooseDestDirectoryDialog" timestamp="1613417387717">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="584" y="190" key="chooseDestDirectoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1612819341165" />
+    <state x="584" y="190" key="chooseDestDirectoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1613417387717" />
     <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1612386037618">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
