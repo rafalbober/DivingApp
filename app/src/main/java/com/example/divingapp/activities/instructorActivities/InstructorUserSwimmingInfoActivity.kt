@@ -180,6 +180,7 @@ class InstructorUserSwimmingInfoActivity : AppCompatActivity() {
     {
         val intent = Intent(this, InstructorUserSkillDetailsActivity::class.java)
         intent.putExtra("userId", userId)
+        intent.put
         startActivity(intent)
     }
 
