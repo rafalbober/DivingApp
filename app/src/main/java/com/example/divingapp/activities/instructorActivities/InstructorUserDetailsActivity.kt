@@ -78,6 +78,8 @@ class InstructorUserDetailsActivity : AppCompatActivity(), IInstructorUserDetail
     override fun goToContactActivity() {
         val intent = Intent(this, InstructorUserContactActivity::class.java)
         intent.putExtra("userId", userId)
+        intent.putExtra("name", name)
+        intent.putExtra("surname", surname)
         startActivity(intent)
     }
 }
