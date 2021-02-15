@@ -26,11 +26,6 @@ class UsersRecyclerAdapter(options: FirebaseRecyclerOptions<UserData>, onNoteLis
         init {
             itemView.setOnClickListener {
                 val position: Int = adapterPosition
-                Toast.makeText(
-                        itemView.context,
-                        "You clicked on item # ${position + 1}",
-                        Toast.LENGTH_SHORT
-                ).show()
                 onNoteListener.onUserClick(adapterPosition, userId, itemName.text.toString(), itemSurname.text.toString())
             }
         }
