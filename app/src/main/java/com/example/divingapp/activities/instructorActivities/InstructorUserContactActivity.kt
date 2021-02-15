@@ -3,6 +3,7 @@ package com.example.divingapp.activities.instructorActivities
 import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
@@ -35,6 +36,11 @@ class InstructorUserContactActivity : AppCompatActivity() {
         surname = intent.getStringExtra("surname")!!
 
         database = FirebaseDatabase.getInstance()
+
+        Log.d("PutStrings", "On Create: $userId $name $surname")
+
+        setEditTextsValues()
+        setNameAndSurname()
     }
 
     private fun setEditTextsValues()
@@ -46,6 +52,7 @@ class InstructorUserContactActivity : AppCompatActivity() {
             }
 
             override fun onDataChange(snapshot: DataSnapshot) {
+                Log.d("onDataChange: ", snapshot.child("PhoneNumber").value.toString() + " " + snapshot.child("Email").value.toString())
                 etEmail.setText(snapshot.child("Email").value.toString())
                 etPhone.setText(snapshot.child("PhoneNumber").value.toString())
             }
