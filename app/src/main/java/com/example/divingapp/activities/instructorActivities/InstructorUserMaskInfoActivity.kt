@@ -116,29 +116,31 @@ class InstructorUserMaskInfoActivity : AppCompatActivity() {
         }
     }
 
-    private fun goToMaskDetailsLayout()
+    private fun goToMaskDetailsLayout(skillName: String)
     {
         val intent = Intent(this, InstructorUserSkillDetailsActivity::class.java)
         intent.putExtra("userId", userId)
+        intent.putExtra("category", "Maska")
+        intent.putExtra("skill", skillName)
         startActivity(intent)
     }
 
     private fun setButtonsOnClickListeners()
     {
         btMask1.setOnClickListener {
-            goToMaskDetailsLayout()
+            goToMaskDetailsLayout(btMask1.text.toString())
         }
 
         btMask2.setOnClickListener {
-            goToMaskDetailsLayout()
+            goToMaskDetailsLayout(btMask2.text.toString())
         }
 
         btMask3.setOnClickListener {
-            goToMaskDetailsLayout()
+            goToMaskDetailsLayout(btMask3.text.toString())
         }
 
         btMask4.setOnClickListener {
-            goToMaskDetailsLayout()
+            goToMaskDetailsLayout(btMask4.text.toString())
         }
     }
 }

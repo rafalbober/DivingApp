@@ -131,33 +131,35 @@ class InstructorUserAutomatInfoActivity : AppCompatActivity() {
         }
     }
 
-    private fun goToAutomatDetailsLayout()
+    private fun goToAutomatDetailsLayout(skillName: String)
     {
         val intent = Intent(this, InstructorUserSkillDetailsActivity::class.java)
         intent.putExtra("userId", userId)
+        intent.putExtra("category", "Automat")
+        intent.putExtra("skill", skillName)
         startActivity(intent)
     }
 
     private fun setButtonsOnClickListeners()
     {
         btAutomat1.setOnClickListener {
-            goToAutomatDetailsLayout()
+            goToAutomatDetailsLayout(btAutomat1.text.toString())
         }
 
         btAutomat2.setOnClickListener {
-            goToAutomatDetailsLayout()
+            goToAutomatDetailsLayout(btAutomat2.text.toString())
         }
 
         btAutomat3.setOnClickListener {
-            goToAutomatDetailsLayout()
+            goToAutomatDetailsLayout(btAutomat3.text.toString())
         }
 
         btAutomat4.setOnClickListener {
-            goToAutomatDetailsLayout()
+            goToAutomatDetailsLayout(btAutomat4.text.toString())
         }
 
         btAutomat5.setOnClickListener {
-            goToAutomatDetailsLayout()
+            goToAutomatDetailsLayout(btAutomat5.text.toString())
         }
     }
 }

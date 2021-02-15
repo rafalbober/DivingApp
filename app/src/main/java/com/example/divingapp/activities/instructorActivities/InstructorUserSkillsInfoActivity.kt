@@ -147,37 +147,39 @@ class InstructorUserSkillsInfoActivity : AppCompatActivity() {
         }
     }
 
-    private fun goToSkillDetailsLayout()
+    private fun goToSkillDetailsLayout(skillName: String)
     {
         val intent = Intent(this, InstructorUserSkillDetailsActivity::class.java)
         intent.putExtra("userId", userId)
+        intent.putExtra("category", "Umiejętności")
+        intent.putExtra("skill", skillName)
         startActivity(intent)
     }
 
     private fun setButtonsOnClickListeners()
     {
         btSkill1.setOnClickListener {
-            goToSkillDetailsLayout()
+            goToSkillDetailsLayout(btSkill1.text.toString())
         }
 
         btSkill2.setOnClickListener {
-            goToSkillDetailsLayout()
+            goToSkillDetailsLayout(btSkill2.text.toString())
         }
 
         btSkill3.setOnClickListener {
-            goToSkillDetailsLayout()
+            goToSkillDetailsLayout(btSkill3.text.toString())
         }
 
         btSkill4.setOnClickListener {
-            goToSkillDetailsLayout()
+            goToSkillDetailsLayout(btSkill4.text.toString())
         }
 
         btSkill5.setOnClickListener {
-            goToSkillDetailsLayout()
+            goToSkillDetailsLayout(btSkill5.text.toString())
         }
 
         btSkill6.setOnClickListener {
-            goToSkillDetailsLayout()
+            goToSkillDetailsLayout(btSkill6.text.toString())
         }
     }
 }

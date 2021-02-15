@@ -101,25 +101,27 @@ class InstructorUserEquipmentInfoActivity : AppCompatActivity() {
         }
     }
 
-    private fun goToEquipmentDetailsLayout()
+    private fun goToEquipmentDetailsLayout(skillName: String)
     {
         val intent = Intent(this, InstructorUserSkillDetailsActivity::class.java)
         intent.putExtra("userId", userId)
+        intent.putExtra("category", "Sprzęt")
+        intent.putExtra("skill", skillName)
         startActivity(intent)
     }
 
     private fun setButtonsOnClickListeners()
     {
         btEquipment1.setOnClickListener {
-            goToEquipmentDetailsLayout()
+            goToEquipmentDetailsLayout(btEquipment1.text.toString())
         }
 
         btEquipment2.setOnClickListener {
-            goToEquipmentDetailsLayout()
+            goToEquipmentDetailsLayout(btEquipment2.text.toString())
         }
 
         btEquipment3.setOnClickListener {
-            goToEquipmentDetailsLayout()
+            goToEquipmentDetailsLayout(btEquipment3.text.toString())
         }
     }
 }

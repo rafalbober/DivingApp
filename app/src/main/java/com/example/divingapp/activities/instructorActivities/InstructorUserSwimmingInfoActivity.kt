@@ -176,46 +176,47 @@ class InstructorUserSwimmingInfoActivity : AppCompatActivity() {
         }
     }
 
-    private fun goToSwimmingDetailsLayout()
+    private fun goToSwimmingDetailsLayout(skillName: String)
     {
         val intent = Intent(this, InstructorUserSkillDetailsActivity::class.java)
         intent.putExtra("userId", userId)
-        intent.put
+        intent.putExtra("category", "Pływanie")
+        intent.putExtra("skill", skillName)
         startActivity(intent)
     }
 
     private fun setButtonsOnClickListeners()
     {
         btSwimming1.setOnClickListener {
-            goToSwimmingDetailsLayout()
+            goToSwimmingDetailsLayout(btSwimming1.text.toString())
         }
 
         btSwimming2.setOnClickListener {
-            goToSwimmingDetailsLayout()
+            goToSwimmingDetailsLayout(btSwimming2.text.toString())
         }
 
         btSwimming3.setOnClickListener {
-            goToSwimmingDetailsLayout()
+            goToSwimmingDetailsLayout(btSwimming3.text.toString())
         }
 
         btSwimming4.setOnClickListener {
-            goToSwimmingDetailsLayout()
+            goToSwimmingDetailsLayout(btSwimming4.text.toString())
         }
 
         btSwimming5.setOnClickListener {
-            goToSwimmingDetailsLayout()
+            goToSwimmingDetailsLayout(btSwimming5.text.toString())
         }
 
         btSwimming6.setOnClickListener {
-            goToSwimmingDetailsLayout()
+            goToSwimmingDetailsLayout(btSwimming6.text.toString())
         }
 
         btSwimming7.setOnClickListener {
-            goToSwimmingDetailsLayout()
+            goToSwimmingDetailsLayout(btSwimming7.text.toString())
         }
 
         btSwimming8.setOnClickListener {
-            goToSwimmingDetailsLayout()
+            goToSwimmingDetailsLayout(btSwimming8.text.toString())
         }
     }
 }
