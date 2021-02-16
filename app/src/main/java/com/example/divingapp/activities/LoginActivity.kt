@@ -52,17 +52,7 @@ class LoginActivity : AppCompatActivity(), ILoginView{
         })
 
         tvReset.setOnClickListener {
-            val builder: AlertDialog.Builder = AlertDialog.Builder(this)
-            builder.setTitle("Podaj swój adres e-mail.")
-            val view: View = layoutInflater.inflate(R.layout.reset_password, null)
-            val email = view.findViewById<EditText>(R.id.et_reset)
-            builder.setView(view)
-            builder.setPositiveButton("Zresetuj hasło.", DialogInterface.OnClickListener { _ , _ ->
-                resetPassword(email)
-            })
-            builder.setNegativeButton("Wróć do logowania.", DialogInterface.OnClickListener { _, _ ->
-            })
-            builder.show()
+            setResetPasswordDialogBuilder()
         }
 
 
@@ -152,5 +142,20 @@ class LoginActivity : AppCompatActivity(), ILoginView{
                     goToAdministratorHomeActivity()
             }
         })
+    }
+
+    private fun setResetPasswordDialogBuilder()
+    {
+        val builder: AlertDialog.Builder = AlertDialog.Builder(this)
+        builder.setTitle("Podaj swój adres e-mail.")
+        val view: View = layoutInflater.inflate(R.layout.reset_password, null)
+        val email = view.findViewById<EditText>(R.id.et_reset)
+        builder.setView(view)
+        builder.setPositiveButton("Zresetuj hasło.", DialogInterface.OnClickListener { _ , _ ->
+            resetPassword(email)
+        })
+        builder.setNegativeButton("Wróć do logowania.", DialogInterface.OnClickListener { _, _ ->
+        })
+        builder.show()
     }
 }

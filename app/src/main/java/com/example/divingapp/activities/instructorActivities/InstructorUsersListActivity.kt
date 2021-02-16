@@ -67,6 +67,12 @@ class InstructorUsersListActivity : AppCompatActivity(), IInstructorUsersListVie
         intent.putExtra("surname", surname)
         startActivity(intent)
     }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        startActivity(Intent(this, InstructorHomeActivity::class.java))
+        finish()
+    }
 }
 
 
