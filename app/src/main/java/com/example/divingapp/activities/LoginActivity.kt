@@ -1,10 +1,14 @@
 package com.example.divingapp.activities
 
+import android.content.DialogInterface
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import android.util.Patterns
 import android.view.View
 import android.widget.*
+import androidx.appcompat.app.AlertDialog
 import com.example.divingapp.Presenter.classes.LoginPresenter
 import com.example.divingapp.R
 import com.example.divingapp.View.ILoginView
@@ -22,6 +26,7 @@ class LoginActivity : AppCompatActivity(), ILoginView{
     private lateinit var progressBar: ProgressBar
     private lateinit var fAuth : FirebaseAuth
     private lateinit var database: FirebaseDatabase
+    private lateinit var tvReset: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,6 +37,7 @@ class LoginActivity : AppCompatActivity(), ILoginView{
         val btLogin: Button = findViewById(R.id.bt_login)
         val tvRegister: TextView = findViewById(R.id.tv_register)
         progressBar = findViewById(R.id.progressBar)
+        tvReset = findViewById(R.id.tv_password_reset)
 
         val loginPresenter = LoginPresenter(this)
         fAuth = FirebaseAuth.getInstance()
@@ -44,6 +50,34 @@ class LoginActivity : AppCompatActivity(), ILoginView{
         tvRegister.setOnClickListener(View.OnClickListener {
             startActivity(Intent(applicationContext, RegistrationActivity::class.java))
         })
+
+        tvReset.setOnClickListener {
+            val builder: AlertDialog.Builder = AlertDialog.Builder(this)
+            builder.setTitle("Podaj swój adres e-mail.")
+            val view: View = layoutInflater.inflate(R.layout.reset_password, null)
+            val email = view.findViewById<EditText>(R.id.et_reset)
+            builder.setView(view)
+            builder.setPositiveButton("Zresetuj hasło.", DialogInterface.OnClickListener { _ , _ ->
+                resetPassword(email)
+            })
+            builder.setNegativeButton("Wróć do logowania.", DialogInterface.OnClickListener { _, _ ->
+            })
+            builder.show()
+        }
+
+
+
+    }
+
+    private fun resetPassword(email: EditText)
+    {
+        if(Patterns.EMAIL_ADDRESS.matcher(email.text.toString()).matches())
+            fAuth.sendPasswordResetEmail(email.text.toString())
+                .addOnCompleteListener { task ->
+                    if (task.isSuccessful) {
+                        Toast.makeText(this, "E-mail został wysłany.", Toast.LENGTH_SHORT).show()
+                    }
+                }
     }
 
     override fun onLoginResult(result: String) {

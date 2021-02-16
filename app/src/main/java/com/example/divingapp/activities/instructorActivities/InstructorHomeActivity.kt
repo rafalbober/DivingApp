@@ -3,7 +3,6 @@ package com.example.divingapp.activities.instructorActivities
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import android.widget.Button
 import com.example.divingapp.Presenter.classes.InstructorHomePresenter
 import com.example.divingapp.R
@@ -31,10 +30,7 @@ class InstructorHomeActivity : AppCompatActivity(), IInstructorHomeView {
         val btUsers: Button = findViewById(R.id.bt_users_instructor)
         val btMeetings: Button = findViewById(R.id.bt_meetings_instructor)
         val btLogout: Button = findViewById(R.id.bt_logout_instructor)
-
-//        val userId = intent.getStringExtra("user_id")
-//        val email = intent.getStringExtra("email")
-
+        val btAddUser: Button = findViewById(R.id.bt_instructor_add_user)
 
         btLogout.setOnClickListener {
             instructorHomePresenter.onLogout()
@@ -52,6 +48,9 @@ class InstructorHomeActivity : AppCompatActivity(), IInstructorHomeView {
             goToUsersListActivity()
         }
 
+        btAddUser.setOnClickListener {
+            goToAddUserActivity()
+        }
     }
 
     public override fun onStart() {
@@ -67,6 +66,11 @@ class InstructorHomeActivity : AppCompatActivity(), IInstructorHomeView {
         }
     }
 
+
+    private fun goToAddUserActivity() {
+        startActivity(Intent(this, InstructorAddUserActivity::class.java))
+    }
+
     override fun goToLoginActivity() {
         startActivity(Intent(this, LoginActivity::class.java))
         finish()
@@ -74,22 +78,16 @@ class InstructorHomeActivity : AppCompatActivity(), IInstructorHomeView {
 
     private fun goToProfileActivity() {
         val intent = Intent(this, InstructorProfileActivity::class.java)
-//        intent.putExtra("user_id", userId)
-//        intent.putExtra("email", email)
         startActivity(intent)
     }
 
     private fun goToUsersListActivity() {
         val intent = Intent(this, InstructorUsersListActivity::class.java)
-//        intent.putExtra("user_id", userId)
-//        intent.putExtra("email", email)
         startActivity(intent)
     }
 
     private fun goToMeetingsListActivity() {
         val intent = Intent(this, InstructorMeetingsListActivity::class.java)
-//        intent.putExtra("user_id", userId)
-//        intent.putExtra("email", email)
         startActivity(intent)
     }
 

@@ -1,11 +1,14 @@
 package com.example.divingapp.activities.instructorActivities
 
+import android.content.DialogInterface
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Patterns
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import com.example.divingapp.Model.User
 import com.example.divingapp.Presenter.classes.InstructorProfilePresenter
 import com.example.divingapp.R
@@ -49,11 +52,36 @@ class InstructorProfileActivity : AppCompatActivity(), IInstructorProfileView {
             instructorProfilePresenter.onSave(firebaseUser, database)
         }
 
+        btReset.setOnClickListener {
+            val builder: AlertDialog.Builder = AlertDialog.Builder(this)
+            builder.setTitle("Podaj swój adres e-mail.")
+            val view: View = layoutInflater.inflate(R.layout.reset_password, null)
+            val email = view.findViewById<EditText>(R.id.et_reset)
+            builder.setView(view)
+            builder.setPositiveButton("Zresetuj hasło.", DialogInterface.OnClickListener { _, _ ->
+                resetPassword(email)
+            })
+            builder.setNegativeButton("Wróć do profilu.", DialogInterface.OnClickListener { _, _ ->
+            })
+            builder.show()
+        }
+
     }
 
     override fun onStart() {
         super.onStart()
         instructorProfilePresenter.onStart(firebaseUser, database)
+    }
+
+    private fun resetPassword(email: EditText)
+    {
+        if(Patterns.EMAIL_ADDRESS.matcher(email.text.toString()).matches())
+            auth.sendPasswordResetEmail(email.text.toString())
+                .addOnCompleteListener { task ->
+                    if (task.isSuccessful) {
+                        Toast.makeText(this, "E-mail został wysłany.", Toast.LENGTH_SHORT).show()
+                    }
+                }
     }
 
     override fun setEditTextsValues(name: String, surname: String, email: String, phone: String)

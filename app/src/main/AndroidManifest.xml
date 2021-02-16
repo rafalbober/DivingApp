@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DivingApp">
-        <activity android:name=".activities.instructorActivities.InstructorUserSkillDetailsActivity"></activity>
+        <activity android:name=".activities.instructorActivities.InstructorAddUserActivity"></activity>
+        <activity android:name=".activities.instructorActivities.InstructorUserWeightsActivity" />
+        <activity android:name=".activities.instructorActivities.InstructorUserSkillDetailsActivity" />
         <activity android:name=".activities.instructorActivities.InstructorUserSwimmingInfoActivity" />
         <activity android:name=".activities.instructorActivities.InstructorUserEquipmentInfoActivity" />
         <activity android:name=".activities.instructorActivities.InstructorUserAutomatInfoActivity" />

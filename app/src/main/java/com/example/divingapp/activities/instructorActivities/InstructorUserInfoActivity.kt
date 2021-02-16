@@ -1,5 +1,6 @@
 package com.example.divingapp.activities.instructorActivities
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -33,6 +34,7 @@ class InstructorUserInfoActivity : AppCompatActivity() {
         spFoam2 = findViewById(R.id.sp_foam2)
 
         val btSave: Button = findViewById(R.id.bt_info_save)
+        val btWeight: Button = findViewById(R.id.bt_info_weights)
 
         database = FirebaseDatabase.getInstance()
         userId = intent.getStringExtra("userId")!!
@@ -40,6 +42,10 @@ class InstructorUserInfoActivity : AppCompatActivity() {
         btSave.setOnClickListener {
             saveSpinnersValues()
             onSaveResult("Zapisano zmiany.")
+        }
+
+        btWeight.setOnClickListener {
+            goToWeightActivity()
         }
 
     }
@@ -146,5 +152,11 @@ class InstructorUserInfoActivity : AppCompatActivity() {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }
 
+    private fun goToWeightActivity()
+    {
+        val intent = Intent(this, InstructorUserWeightsActivity::class.java)
+        intent.putExtra("userId", userId)
+        startActivity(intent)
+    }
 
 }

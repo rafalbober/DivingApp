@@ -7,6 +7,23 @@
     android:background="@drawable/background"
     tools:context=".activities.LoginActivity">
 
+    <TextView
+        android:id="@+id/tv_password_reset"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="160dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:text="Nie pamiętasz hasła?"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_register" />
+
     <EditText
         android:id="@+id/et_password"
         android:layout_width="0dp"
