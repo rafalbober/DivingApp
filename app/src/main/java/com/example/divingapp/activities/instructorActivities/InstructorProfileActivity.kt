@@ -10,14 +10,13 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import com.example.divingapp.Model.User
-import com.example.divingapp.Presenter.classes.InstructorProfilePresenter
+import com.example.divingapp.Presenter.classes.ProfilePresenter
 import com.example.divingapp.R
 import com.example.divingapp.View.IInstructorProfileView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.ktx.Firebase
 
 class InstructorProfileActivity : AppCompatActivity(), IInstructorProfileView {
 
@@ -30,13 +29,13 @@ class InstructorProfileActivity : AppCompatActivity(), IInstructorProfileView {
     private lateinit var etPhone: EditText
     private lateinit var btSave: Button
     private lateinit var btReset: Button
-    private lateinit var instructorProfilePresenter: InstructorProfilePresenter
+    private lateinit var profilePresenter: ProfilePresenter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_instructor_profile)
 
-        instructorProfilePresenter = InstructorProfilePresenter(this)
+        profilePresenter = ProfilePresenter(this)
         auth = FirebaseAuth.getInstance()
         database = FirebaseDatabase.getInstance()
         firebaseUser = auth.currentUser!!
@@ -49,7 +48,7 @@ class InstructorProfileActivity : AppCompatActivity(), IInstructorProfileView {
         btReset = findViewById(R.id.bt_reset_instructor)
 
         btSave.setOnClickListener {
-            instructorProfilePresenter.onSave(firebaseUser, database)
+            profilePresenter.onSave(firebaseUser, database)
         }
 
         btReset.setOnClickListener {
@@ -70,7 +69,7 @@ class InstructorProfileActivity : AppCompatActivity(), IInstructorProfileView {
 
     override fun onStart() {
         super.onStart()
-        instructorProfilePresenter.onStart(firebaseUser, database)
+        profilePresenter.onStart(firebaseUser, database, "Instructors")
     }
 
     private fun resetPassword(email: EditText)

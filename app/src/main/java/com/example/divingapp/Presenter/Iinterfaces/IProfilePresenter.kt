@@ -5,10 +5,10 @@ import com.example.divingapp.View.IInstructorProfileView
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.FirebaseDatabase
 
-interface IInstructorProfilePresenter {
+interface IProfilePresenter {
 
     val instructorUsersListView: IInstructorProfileView
 
-    fun onStart(firebaseUser: FirebaseUser, database: FirebaseDatabase)
+    fun onStart(firebaseUser: FirebaseUser, database: FirebaseDatabase, userRole: String)
     fun onSave(firebaseUser: FirebaseUser, database: FirebaseDatabase)
 }

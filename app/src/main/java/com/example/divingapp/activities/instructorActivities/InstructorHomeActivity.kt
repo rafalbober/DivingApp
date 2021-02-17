@@ -16,12 +16,13 @@ import com.google.firebase.ktx.Firebase
 class InstructorHomeActivity : AppCompatActivity(), IInstructorHomeView {
 
     private lateinit var auth: FirebaseAuth
+    private lateinit var instructorHomePresenter: InstructorHomePresenter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_instructor_home)
 
-        val instructorHomePresenter = InstructorHomePresenter(this)
+        instructorHomePresenter = InstructorHomePresenter(this)
 
         // Initialize Firebase Auth
         auth = Firebase.auth
@@ -51,6 +52,11 @@ class InstructorHomeActivity : AppCompatActivity(), IInstructorHomeView {
         btAddUser.setOnClickListener {
             goToAddUserActivity()
         }
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        instructorHomePresenter.onLogout()
     }
 
     public override fun onStart() {

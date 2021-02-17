@@ -1,17 +1,17 @@
 package com.example.divingapp.Presenter.classes
 
 import com.example.divingapp.Model.User
-import com.example.divingapp.Presenter.Iinterfaces.IInstructorProfilePresenter
+import com.example.divingapp.Presenter.Iinterfaces.IProfilePresenter
 import com.example.divingapp.View.IInstructorProfileView
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.*
 
-class InstructorProfilePresenter(override val instructorUsersListView: IInstructorProfileView) :
-        IInstructorProfilePresenter {
+class ProfilePresenter(override val instructorUsersListView: IInstructorProfileView) :
+        IProfilePresenter {
 
-    override fun onStart(firebaseUser: FirebaseUser, database: FirebaseDatabase) {
+    override fun onStart(firebaseUser: FirebaseUser, database: FirebaseDatabase, userRole: String) {
 
-        val instructorsReference: DatabaseReference = database.getReference("Instructors").child(firebaseUser.uid)
+        val instructorsReference: DatabaseReference = database.getReference(userRole).child(firebaseUser.uid)
         instructorsReference.addValueEventListener(object  : ValueEventListener {
             override fun onCancelled(error: DatabaseError) {
                 instructorUsersListView.saveDataResult("Wystąpił nieoczekiwany błąd podczas pobierania danych")

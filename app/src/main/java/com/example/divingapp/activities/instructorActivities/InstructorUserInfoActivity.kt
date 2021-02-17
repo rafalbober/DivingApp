@@ -3,12 +3,8 @@ package com.example.divingapp.activities.instructorActivities
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import android.widget.*
-import com.example.divingapp.Presenter.classes.InstructorProfilePresenter
 import com.example.divingapp.R
-import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.*
 
 class InstructorUserInfoActivity : AppCompatActivity() {
