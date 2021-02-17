@@ -71,7 +71,7 @@ class AdministratorHomeActivity : AppCompatActivity(), IAdministratorHomeView {
     }
 
     override fun goToInstructorsListActivity() {
-        startActivity(Intent(this, AdministratorProfileActivity::class.java))
+        startActivity(Intent(this, AdministratorInstructorsListActivity::class.java))
     }
 
     override fun goToCreateInstructorActivity() {
