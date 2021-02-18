@@ -106,7 +106,7 @@ class UserHomeActivity : AppCompatActivity(), IUserHomeView {
     }
 
     override fun goToMeetingsActivity() {
-        startActivity(Intent(this, UserProfileActivity::class.java))
+        startActivity(Intent(this, UserMeetingsActivity::class.java))
     }
 
     override fun logout() {

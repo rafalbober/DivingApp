@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DivingApp">
-        <activity android:name=".activities.instructorActivities.InstructorNewMeetingActivity"></activity>
+        <activity android:name=".activities.userActivities.UserMeetingsActivity"></activity>
+        <activity android:name=".activities.instructorActivities.InstructorNewMeetingActivity" />
         <activity android:name=".activities.instructorActivities.InstructorSingleUserMeetingsActivity" />
         <activity android:name=".activities.adminActivities.AdministratorInstructorsListActivity" />
         <activity android:name=".activities.adminActivities.RegisterInstructorActivity" />
