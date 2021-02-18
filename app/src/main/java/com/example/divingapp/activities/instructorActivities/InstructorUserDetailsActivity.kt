@@ -20,6 +20,7 @@ class InstructorUserDetailsActivity : AppCompatActivity(), IInstructorUserDetail
     lateinit var btSkills: Button
     lateinit var btContact: Button
     lateinit var btDelete: Button
+    lateinit var btMeetings: Button
     lateinit var name: String
     lateinit var surname: String
     lateinit var userId: String
@@ -39,6 +40,7 @@ class InstructorUserDetailsActivity : AppCompatActivity(), IInstructorUserDetail
         btSkills = findViewById(R.id.bt_user_details_skills)
         btContact = findViewById(R.id.bt_user_details_contact)
         btDelete = findViewById(R.id.bt_delete_user)
+        btMeetings = findViewById(R.id.bt_instructor_user_details_meetings)
 
         name = intent.getStringExtra("name")!!
         surname = intent.getStringExtra("surname")!!
@@ -59,6 +61,10 @@ class InstructorUserDetailsActivity : AppCompatActivity(), IInstructorUserDetail
         btDelete.setOnClickListener {
             deleteUser(userId)
         }
+
+        btMeetings.setOnClickListener {
+            goToMeetingsActivity()
+        }
     }
 
     override fun onStart() {
@@ -69,6 +75,14 @@ class InstructorUserDetailsActivity : AppCompatActivity(), IInstructorUserDetail
     @SuppressLint("SetTextI18n")
     override fun setUserName() {
         tvName.text = "$name $surname"
+    }
+
+    private fun goToMeetingsActivity() {
+        val intent = Intent(this, InstructorSingleUserMeetingsActivity::class.java)
+        intent.putExtra("userId", userId)
+        intent.putExtra("name", name)
+        intent.putExtra("surname", surname)
+        startActivity(intent)
     }
 
     override fun goToWeightsActivity() {

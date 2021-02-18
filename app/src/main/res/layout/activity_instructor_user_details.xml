@@ -9,10 +9,26 @@
     tools:context=".activities.instructorActivities.InstructorUserDetailsActivity">
 
     <Button
+        android:id="@+id/bt_instructor_user_details_meetings"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/btn_background"
+        android:clickable="true"
+        android:focusable="true"
+        android:text="Spotkania"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:backgroundTint="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/bt_user_details_skills"
+        app:layout_constraintStart_toStartOf="@+id/bt_user_details_skills"
+        app:layout_constraintTop_toBottomOf="@+id/bt_user_details_contact" />
+
+    <Button
         android:id="@+id/bt_delete_user"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/btn_background"
         android:clickable="true"
         android:focusable="true"
@@ -22,13 +38,13 @@
         app:backgroundTint="@color/white"
         app:layout_constraintEnd_toEndOf="@+id/bt_user_details_skills"
         app:layout_constraintStart_toStartOf="@+id/bt_user_details_skills"
-        app:layout_constraintTop_toBottomOf="@+id/bt_user_details_contact" />
+        app:layout_constraintTop_toBottomOf="@+id/bt_instructor_user_details_meetings" />
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/imageView3"
         android:layout_width="185dp"
         android:layout_height="168dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="50dp"
         android:src="@drawable/profilowe2"
         app2:layout_constraintEnd_toEndOf="parent"
         app2:layout_constraintStart_toStartOf="parent"
@@ -42,7 +58,7 @@
         android:id="@+id/bt_user_details_weight"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="50dp"
         android:background="@drawable/btn_background"
         android:clickable="true"
         android:focusable="true"
@@ -58,7 +74,7 @@
         android:id="@+id/bt_user_details_skills"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/btn_background"
         android:clickable="true"
         android:focusable="true"
@@ -76,7 +92,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
         android:background="@drawable/btn_background"
@@ -95,7 +111,7 @@
         android:id="@+id/tv_user_details_name"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="15dp"
         android:gravity="center"
         android:text="Jan Kowalski"
         android:textColor="@color/white"
