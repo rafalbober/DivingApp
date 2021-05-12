@@ -133,7 +133,7 @@
         android:autofillHints=""
         android:background="@drawable/et_background"
         android:ems="10"
-        android:hint="@string/password"
+        android:hint="Powtórz hasło"
         android:inputType="textPassword"
         android:paddingLeft="20dp"
         android:paddingTop="10dp"

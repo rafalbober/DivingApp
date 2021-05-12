@@ -97,7 +97,7 @@ class RegisterInstructorActivity : AppCompatActivity() {
             firebaseAuth.createUserWithEmailAndPassword((user.email) as String, (user.password) as String).addOnCompleteListener(
                 OnCompleteListener<AuthResult> { task ->
                     if (task.isSuccessful) {
-                        onRegisterResult("Registration succeeded.")
+                        onRegisterResult("Rejestracja powiodła się.")
                         onSuccessfulRegistration(task, user)
                     } else {
                         onRegisterResult(task.exception!!.message.toString())
@@ -106,7 +106,7 @@ class RegisterInstructorActivity : AppCompatActivity() {
             )
         }
         else {
-            onRegisterResult("Registration failed")
+            onRegisterResult("Rejestracja nie powiodła się.")
 
             if(!user.isNameValid())
                 name.error = "Name is not valid"

@@ -29,14 +29,14 @@ class RegistrationPresenter(override val registrationView: IRegistrationView) :
                 password2 = password2.text.toString().trim()
         )
         val registrationResult = user.isRegistrationDataValid()
-        registrationView.makeProgressBarVisible()
+        //registrationView.makeProgressBarVisible()
 
         if(registrationResult) {
             firebaseAuth.createUserWithEmailAndPassword((user.email) as String, (user.password) as String).addOnCompleteListener(
                     OnCompleteListener<AuthResult> { task ->
                         if (task.isSuccessful) {
                             registrationView.makeProgressBarInvisible()
-                            registrationView.onRegisterResult("Registration succeeded.")
+                            registrationView.onRegisterResult("Rejestracja powiodła się.")
                             registrationView.onSuccessfulRegistration(task, user)
                         } else {
                             registrationView.makeProgressBarInvisible()
@@ -47,20 +47,20 @@ class RegistrationPresenter(override val registrationView: IRegistrationView) :
         }
         else {
             registrationView.makeProgressBarInvisible()
-            registrationView.onRegisterResult("Registration failed")
+            registrationView.onRegisterResult("Rejestracja nie powiodła się")
 
             if(!user.isNameValid())
-                name.error = "Name is not valid"
+                name.error = "Imię jest niepoprawne"
             if(!user.isSurnameValid())
-                surname.error = "Surname is not valid"
+                surname.error = "Nazwisko jest niepoprawne"
             if(!user.isEmailValid())
-                email.error = "Email is not valid"
+                email.error = "E-mail jest niepoprawny"
             if(!user.isPhoneNumberValid())
-                phoneNumber.error = "Phone number is not valid"
+                phoneNumber.error = "Numer telefonu jest niepoprawny"
             if(!user.isPasswordValid())
-                password.error = "Password is not valid"
+                password.error = "Hasło nie spełnia wymagań"
             if(!user.arePasswordsMatches())
-                password2.error = "Passwords are not the same"
+                password2.error = "Hasła nie są takie same."
         }
 
     }

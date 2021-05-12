@@ -1,5 +1,6 @@
 package com.example.divingapp.activities.userActivities
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.EditText
@@ -15,5 +16,10 @@ class UserNoInstructorActivity : AppCompatActivity() {
         val userId = intent.getStringExtra("userId")
 
         etId.setText(userId)
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        startActivity(Intent(this, UserHomeActivity::class.java))
     }
 }

@@ -22,7 +22,7 @@ class LoginPresenter(override val loginView: ILoginView) :
                     OnCompleteListener<AuthResult> { task ->
                         if (task.isSuccessful) {
                             loginView.makeProgressBarInvisible()
-                            loginView.onLoginResult("login succeeded.")
+                            loginView.onLoginResult("Logowanie powiodło się.")
                             loginView.onSuccessfulLogin(task)
                         } else {
                             loginView.makeProgressBarInvisible()
@@ -33,9 +33,9 @@ class LoginPresenter(override val loginView: ILoginView) :
         else {
             loginView.makeProgressBarInvisible()
             if (!user.isEmailValid())
-                email.error = "Email is not valid"
+                email.error = "E-mail jest niepoprawny."
             if (!user.isPasswordValid())
-                password.error = "Password is not valid"
+                password.error = "To pole nie może być puste."
         }
     }
 }
